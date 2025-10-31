@@ -1,96 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <!-- Définition du jeu de caractères -->
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfolio - Marchand Baptiste</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <!-- Adaptation à la taille de l’écran -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Titre affiché dans l’onglet du navigateur -->
-    <title>Portfolio - Marchand Baptiste</title>
-
-    <!-- Lien vers la feuille de style -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- Description SEO -->
-    <meta name="description" content="PortFolio de Baptiste Marchand" />
-  </head>
-
-  <body>
-    <!-- En-tête du site -->
-    <header>
-      <div class="flex">
-        <div class="img">
-          <img src="./assets/img/PP.jpg" alt="Photo de profil" />
-        </div>
-        <div class="texte">
-          <h1>PortFolio</h1>
-          <h1>Marchand Baptiste</h1>
-        </div>
-      </div>
-    </header>
-
-    <!-- Contenu principal -->
-    <main id="accueil">
-      <!-- carrousel -->
-      <section class="carrousel">
-        <h2>Mes projets :</h2>
-        <div>
-          <ul>
-            <li>
-              <h3>Application Python</h3>
-              <img class="img" src="./assets/img/projetABR.png" />
-            </li>
-            <li>
-              <h3>Projet a venir...</h3>
-              <video width="100%" height="300px" autoplay muted loop>
-                <source
-                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
-                  type="video/mp4"
-                />
-                Votre navigateur ne supporte pas la lecture de vidéos.
-              </video>
-            </li>
-            <li>
-              <h3>Projet a venir...</h3>
-              <video width="100%" height="300px" autoplay muted loop>
-                <source
-                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
-                  type="video/mp4"
-                />
-                Votre navigateur ne supporte pas la lecture de vidéos.
-              </video>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <button>
-          <a href="./assets/download/CV_Baptiste nov 2025.pdf" download
-            ><img class="img" src="./assets/logo/telechargements-blanc.png" />My
-            resume</a
-          >
-        </button>
-      </section>
-    </main>
-
-    <hr />
-    <!-- Pied de page -->
-    <footer>
-      <div class="img">
-        <img src="./assets/logo/logo.png" alt="" />
-      </div>
-      <div class="text_footer">
-        <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
-        <p>Contact : baptistemarchand2007@gmail.com</p>
-      </div>
-    </footer>
-    <!-- <footer>
-    <div>
-    <a href="#" class="active"><img class="img" src="./assets/logo/home-open.png"></img></a>
-    <a href="#"><img class="img" src="./assets/logo/folder-close.png"</i></a>
+  <header>
+    <div class="logo">
+      <img src="./assets/logo/logo.png">
     </div>
-  </footer> -->
-  </body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+  <section class="about">
+    <h1>Marchand Baptiste</h1>
+    <div class="cv-buttons">
+      <a href="CV.pdf" class="btn-cv" download>Télécharger CV</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>À propos</h2>
+    <p>
+      Passionné par le développement et les technologies, j’aime coder dans tous les langages et explorer de nouvelles solutions pour créer des projets innovants. La curiosité et la créativité sont au cœur de ma démarche
+    </p>
+  </section>
+
+
+  <section id="projects" class="projects">
+    <h2>Projets</h2>
+    <div class="project-grid">
+      <div class="project-card" onclick="openModal('Projet 1', 'HTML, CSS, JS', 'Description détaillée du projet 1')">
+        <img src="./assets/img/projetABR.png" alt="Projet 1">
+        <h3>Application en Python</h3>
+      </div>
+      <div class="project-card" onclick="openModal('Projet 2', 'HTML, CSS, JS', 'Description détaillée du projet 2')">
+        <video width="100%" height="300px" autoplay muted loop>
+                <source
+                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
+                  type="video/mp4"
+                />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+              </video>
+        <h3>A venir</h3>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
+    <div class="socials">
+      <div>
+      <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" target="_blank">LinkedIn</a>
+      </div>
+      <span>Contact :</span>
+      <a href="baptistemarchand2007@gmail.com">baptistemarchand2007@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
 </html>
