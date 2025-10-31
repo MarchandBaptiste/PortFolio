@@ -1,13 +1,22 @@
+/* reset CSS */
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-a{
+a,
+a:hover,
+a:focus,
+a:visited {
   text-decoration: none;
   color: inherit;
 }
+img {
+  vertical-align: middle;
+}
 
+
+/* Style */
 body {
   background-color: black;
   color: white;
@@ -15,9 +24,10 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* Style header */
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -28,7 +38,7 @@ header {
 }
 
 .logo img{
-  width: 50%;
+  width: 9rem;
   height: auto;
 }
 
@@ -36,6 +46,7 @@ header {
   list-style: none;
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -48,20 +59,7 @@ header {
   color: orange;
 }
 
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-}
-
-/* about */
 .about {
   display: flex;
   flex-direction: column;
@@ -73,15 +71,13 @@ header {
 }
 
 
-.cv-buttons {
+.btn {
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.btn-cv {
   padding: 0.8rem 1.5rem;
+  border-radius: 5px;
   border: 2px solid ;
   color: orange;
   text-decoration: none;
@@ -89,23 +85,24 @@ header {
   transition: all 0.3s ease;
 }
 
-.btn-cv:hover {
+.btn:hover {
   background-color: orange;
   color: black;
   box-shadow: 0 0 10px orange;
+  border-color: orange;
 }
 
 
-/* About */
+
 .about {
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Projects */
-.projects {
-  padding: 4rem 2rem;
+
+.projects, h2 {
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -120,7 +117,6 @@ header {
   background-color: #111;
   border: 2px solid transparent;
   padding: 1rem;
-  cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
 }
@@ -137,56 +133,92 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.project-card {
+  background-color: #111;
+  border: 2px solid transparent;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* garde les proportions sans déformer */
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.project-card button{
+  background-color: black;
+}
+
+[popover] {
+  color: white;
+  padding: 5rem;
+  background: #111;
+  border: 2px solid orange;
+  border-radius: 5px;
+  max-width: 250px;
+  position: fixed;
+  left: 20%;
+  top: 30%;
+  z-index: 1000;
+}
 
 
-/* Footer */
+
+
+/* Style footer */
 footer {
   text-align: center;
   padding: 2rem;
-  border-top: 1px solid #333;
+  border-top: 3px solid white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-footer a{
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+footer p {
   margin-bottom: 1rem;
 }
 
-footer a:hover{
+footer .socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* liens */
+footer a {
+  font-weight: bold;
+  display: inline-block;
+}
+
+footer a:hover {
   color: orange;
 }
 
-footer p{
-  margin-bottom: 1rem;
+/* Responsive */
+@media (min-width: 768px) {
+
+  [popover] {
+  left: 40%;
+  top: 30%;
 }
 
-
-/* Responsive
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 200px;
-    padding-top: 5rem;
-    gap: 2rem;
+  footer {
+    flex-direction: column; 
   }
 
-  .nav-links.active {
-    display: flex;
+  footer .socials {
+    justify-content: center;
   }
+}
 
-  .burger {
-    display: flex;
-  }
-} */

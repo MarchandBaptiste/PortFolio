@@ -10,9 +10,10 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="logo">
-      <img src="./assets/logo/logo.png">
+      <img src="./assets/logo/logo.png" alt="Logo">
     </div>
     <nav>
       <ul class="nav-links">
@@ -22,54 +23,66 @@
     </nav>
   </header>
 
+  <!-- Main -->
   <main>
-  <section class="about">
-    <h1>Marchand Baptiste</h1>
-    <div class="cv-buttons">
-      <a href="CV.pdf" class="btn-cv" download>Télécharger CV</a>
-    </div>
-  </section>
 
-  <section id="about" class="about">
-    <h2>À propos</h2>
-    <p>
-      Passionné par le développement et les technologies, j’aime coder dans tous les langages et explorer de nouvelles solutions pour créer des projets innovants. La curiosité et la créativité sont au cœur de ma démarche
-    </p>
-  </section>
-
-
-  <section id="projects" class="projects">
-    <h2>Projets</h2>
-    <div class="project-grid">
-      <div class="project-card" onclick="openModal('Projet 1', 'HTML, CSS, JS', 'Description détaillée du projet 1')">
-        <img src="./assets/img/projetABR.png" alt="Projet 1">
-        <h3>Application en Python</h3>
+    <!-- Section Présentation -->
+    <section class="about">
+      <h1>Marchand Baptiste</h1>
+      <div>
+        <a href="./assets/download/CV.pdf" class="btn" download>Télécharger CV</a>
       </div>
-      <div class="project-card" onclick="openModal('Projet 2', 'HTML, CSS, JS', 'Description détaillée du projet 2')">
-        <video width="100%" height="300px" autoplay muted loop>
-                <source
-                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
-                  type="video/mp4"
-                />
-                Votre navigateur ne supporte pas la lecture de vidéos.
-              </video>
-        <h3>A venir</h3>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+      <h2>À propos</h2>
+      <p>
+        Passionné par le développement et les technologies, j’aime coder dans tous les langages et explorer de nouvelles solutions pour créer des projets innovants. La curiosité et la créativité sont au cœur de ma démarche.
+      </p>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="projects">
+      <h2>Projets</h2>
+      <div class="project-grid">
+
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <img src="./assets/img/projetABR.png" alt="Projet ABR">
+          <h3>Application en Python</h3>
+          <button type="button" popovertarget="Projets1" class="btn">En savoir plus</button>
+          <div popover="auto" id="Projets1">
+            <p>Application Python gérant un arbre binaire de recherche (ABR)</p>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <video width="100%" height="300px" autoplay muted loop>
+            <source src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <h3>A venir</h3>
+          <button type="button" popovertarget="Projets2" class="btn">En savoir plus</button>
+          <div popover="auto" id="Projets2">
+            <p>Mes futurs projets seront consignés ici !</p>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-
+  </main>
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer>
     <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
     <div class="socials">
-      <div>
       <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" target="_blank">LinkedIn</a>
-      </div>
       <span>Contact :</span>
-      <a href="baptistemarchand2007@gmail.com">baptistemarchand2007@gmail.com</a>
+      <a href="mailto:baptistemarchand2007@gmail.com">baptistemarchand2007@gmail.com</a>
     </div>
   </footer>
 
