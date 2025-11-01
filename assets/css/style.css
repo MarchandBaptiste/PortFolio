@@ -91,6 +91,10 @@ header {
   border-color: orange;
 }
 
+.projects{
+  padding-bottom: 10rem;
+}
+
 .projects h2 {
   padding: 2rem;
   max-width: 1200px;
