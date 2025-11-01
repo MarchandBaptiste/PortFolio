@@ -1,92 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Portfolio - Marchand Baptiste</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="./assets/logo/logo.png" alt="Logo">
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main>
-
-    <!-- Section Présentation -->
-    <section class="about">
-      <h1>Marchand Baptiste</h1>
-      <div>
-        <a href="./assets/download/CV.pdf" class="btn" download>Télécharger CV</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio - Marchand Baptiste</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="./assets/logo/logo.png" alt="Logo" />
       </div>
-    </section>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#projects">Projets</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Section À propos -->
-    <section id="about" class="about">
-      <h2>À propos</h2>
-      <p>
-        Passionné par le développement et les technologies, j’aime coder dans tous les langages et explorer de nouvelles solutions pour créer des projets innovants. La curiosité et la créativité sont au cœur de ma démarche.
-      </p>
-    </section>
+    <!-- Main -->
+    <main>
+      <!--Présentation -->
+      <section class="about">
+        <h1>Marchand Baptiste</h1>
+        <div>
+          <a href="./assets/download/CV.pdf" class="btn" download
+            >Télécharger CV</a
+          >
+        </div>
+      </section>
 
-    <!-- Section Projets -->
-    <section id="projects" class="projects">
-      <h2>Projets</h2>
-      <div class="project-grid">
+      <!--À propos -->
+      <section id="about" class="about">
+        <h2>À propos</h2>
+        <p>
+          Passionné par le développement et les technologies, j’aime coder dans
+          tous les langages et explorer de nouvelles solutions pour créer des
+          projets innovants. La curiosité et la créativité sont au cœur de ma
+          démarche.
+        </p>
+      </section>
 
-        <!-- Projet 1 -->
-        <div class="project-card">
-          <img src="./assets/img/projetABR.png" alt="Projet ABR">
-          <h3>Application en Python</h3>
-          <button type="button" popovertarget="Projets1" class="btn">En savoir plus</button>
-          <div popover="auto" id="Projets1">
-            <p>Application Python gérant un arbre binaire de recherche (ABR)</p>
-            <a href="https://github.com/MarchandBaptiste/Projet-ABR" target="_blank">Github</a>
+      <!--Projets -->
+      <section id="projects" class="projects">
+        <h2>Projets</h2>
+        <div class="project-grid">
+          <!-- Projet 1 -->
+          <div class="project-card">
+            <img src="./assets/img/projetABR.png" alt="Projet ABR" />
+            <div class="project-description">
+              <h3>Application en Python</h3>
+              <button type="button" popovertarget="Projet1" class="btn">
+                En savoir plus
+              </button>
+              <div popover="auto" id="Projet1" class="Projet1">
+                <p>
+                  Application Python gérant un arbre binaire de recherche (ABR)
+                </p>
+                <a
+                  href="https://github.com/MarchandBaptiste/Projet-ABR"
+                  target="_blank"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="project-card">
+            <video width="100%" height="300px" autoplay muted loop>
+              <source
+                src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
+                type="video/mp4"
+              />
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <div class="project-description">
+              <h3>A venir</h3>
+              <button type="button" popovertarget="Projet2" class="btn">
+                En savoir plus
+              </button>
+              <div popover="auto" id="Projet2" class="Projet2">
+                <p>Mes futurs projets seront consignés ici !</p>
+                <!-- <a href="" target="_blank">Liens vers le projet</a> -->
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <!-- Projet 2 -->
-        <div class="project-card">
-          <video width="100%" height="300px" autoplay muted loop>
-            <source src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture de vidéos.
-          </video>
-          <h3>A venir</h3>
-          <button type="button" popovertarget="Projets2" class="btn">En savoir plus</button>
-          <div popover="auto" id="Projets2">
-            <p>Mes futurs projets seront consignés ici !</p>
-            <a href="" target="_blank">Liens vers le projet</a>
-          </div>
-        </div>
-
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
+      <div class="socials">
+        <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/baptiste-marchand-35b027397/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <span>Contact :</span>
+        <a href="mailto:baptistemarchand2007@gmail.com"
+          >baptistemarchand2007@gmail.com</a
+        >
       </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
-    <div class="socials">
-      <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" target="_blank">LinkedIn</a>
-      <span>Contact :</span>
-      <a href="mailto:baptistemarchand2007@gmail.com">baptistemarchand2007@gmail.com</a>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

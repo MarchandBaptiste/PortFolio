@@ -15,12 +15,11 @@ img {
   vertical-align: middle;
 }
 
-
 /* Style */
 body {
   background-color: black;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -37,7 +36,7 @@ header {
   z-index: 10;
 }
 
-.logo img{
+.logo img {
   width: 9rem;
   height: auto;
 }
@@ -55,10 +54,9 @@ header {
   font-weight: 600;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: orange;
 }
-
 
 .about {
   display: flex;
@@ -67,9 +65,10 @@ header {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  padding: 0 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
 
 .btn {
   margin-top: 1.5rem;
@@ -78,7 +77,7 @@ header {
   flex-wrap: wrap;
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
-  border: 2px solid ;
+  border: 2px solid;
   color: orange;
   text-decoration: none;
   font-weight: 600;
@@ -92,16 +91,7 @@ header {
   border-color: orange;
 }
 
-
-
-.about {
-  padding: 2rem 2rem 2rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-
-.projects, h2 {
+.projects h2 {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -119,6 +109,10 @@ header {
   padding: 1rem;
   transition: all 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 16/9;
 }
 
 .project-card:hover {
@@ -128,31 +122,22 @@ header {
 
 .project-card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* garde les proportions exactes */
   margin-bottom: 0.5rem;
+  border-radius: 8px;
+  max-height: 300px;
 }
 
-.project-card {
-  background-color: #111;
-  border: 2px solid transparent;
-  padding: 1rem;
-  transition: all 0.3s ease;
+.project-description {
+  margin-top: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.project-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover; /* garde les proportions sans déformer */
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-}
-
-.project-card button{
+.project-card button {
   background-color: black;
 }
 
@@ -168,9 +153,6 @@ header {
   top: 30%;
   z-index: 1000;
 }
-
-
-
 
 /* Style footer */
 footer {
@@ -207,18 +189,16 @@ footer a:hover {
 
 /* Responsive */
 @media (min-width: 768px) {
-
   [popover] {
-  left: 40%;
-  top: 30%;
-}
+    left: 40%;
+    top: 30%;
+  }
 
   footer {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   footer .socials {
     justify-content: center;
   }
 }
-
