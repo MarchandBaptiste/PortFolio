@@ -113,7 +113,8 @@ h2 {
 
 .projects h2 {
   padding: 2rem;
-  max-width: 1200px;
+  padding-top: 9rem;
+  padding-left: 4rem;
   margin: 0 auto;
 }
 
