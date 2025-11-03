@@ -26,32 +26,28 @@ body {
 /* Style header */
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  background-color: black;
   position: fixed;
   width: 100%;
-  background-color: black;
   z-index: 10;
 }
 
 .logo img {
-  width: 9rem;
+  width: 6rem;
   height: auto;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  gap: 1rem;
+  list-style: none;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
+  font-size: 0.9rem; 
 }
 
 .nav-links a:hover {
@@ -198,6 +194,25 @@ footer a {
 
 footer a:hover {
   color: orange;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem; /* réduit le padding du header */
+  }
+
+  .logo img {
+    width: 6rem; /* réduit la taille du logo */
+  }
+
+  .nav-links {
+    gap: 1rem; /* réduit l'espacement entre les liens */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* réduit légèrement la taille du texte */
+  }
 }
 
 /* Responsive */
