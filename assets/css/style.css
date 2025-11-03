@@ -16,174 +16,227 @@ img {
 }
 
 /* Style */
-* {
-  font-family: "Montserrat", sans-serif;
-  color: #e7dfcc;
-}
-
 body {
-  background: linear-gradient(to bottom, #3b1c00, #000);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0.4rem;
-}
-
-/* Style header */
-header .img img {
-  margin-top: 10vh;
-  width: 50%;
-  height: auto;
-  border-radius: 20px;
-}
-
-header {
-  margin-bottom: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-header h1 {
-  margin-top: 1vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-main {
-  flex: 1;
-}
-
-/* Style caroussel */
-.carrousel {
-  width: 100%;
-}
-
-.carrousel h2 {
-  margin-bottom: 1rem;
-}
-
-.carrousel div {
-  padding: 1rem;
-}
-
-.carrousel ul {
-  width: 100%;
-  height: auto;
-  padding: 20px 10px;
-  display: flex;
-  gap: 4vw;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  background-color: black;
+  color: white;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
-/* Suprime la barre de défilement horizontal */
-.carrousel ul::-webkit-scrollbar {
-  display: none;
+/* Style header */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  z-index: 10;
 }
 
-.carrousel li {
-  list-style-type: none;
-  background-color: #363636;
+.logo img {
+  width: 9rem;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.img-pp {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 5rem 2rem 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+h2 {
+  padding-bottom: 1.5rem;
+}
+
+.btn {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
+  border: 2px solid;
+  color: orange;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: orange;
+  color: black;
+  box-shadow: 0 0 10px orange;
+  border-color: orange;
+}
+
+.projects {
+  padding-bottom: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.projects h2 {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #111;
+  border: 2px solid transparent;
   padding: 1rem;
-  flex: 0 0 90%; /* mobile-first full width */
-  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card a{
+  color: orange;
+}
+
+.project-card:hover {
+  border: 2px solid orange;
+  box-shadow: 0 0 10px orange;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* garde les proportions exactes */
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  max-height: 300px;
+}
+
+.project-description {
+  margin-top: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card button {
+  background-color: black;
+}
+
+
+
+/* Style footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 3px solid white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  min-height: 40vh; /* Empêche le conteneur d’être trop petit */
 }
 
-.carrousel li h3 {
-  padding-bottom: 0.5rem;
-  text-align: center;
-}
-
-.carrousel img,
-.carrousel video {
-  max-width: 100%;
-  max-height: 250px; /* responsive */
-  object-fit: contain; /* preserve ratio */
-  display: block;
-  margin: auto; /* center */
-  border-radius: 6px;
-}
-
-/* faut mettre des boutton pour slid sur les coter dans le carrousel car l'utilisateur na pas forcément les gestes pour naviguer */
-
-/* Style boutton */
-button {
-  border: 0px solid rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+footer p {
   margin-bottom: 1rem;
-  background-color: black;
-  padding-bottom: 2rem;
 }
 
-button a {
+footer .socials {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
-}
-
-button .img {
-  width: 5%;
-  height: auto;
-}
-
-hr {
-  height: 2px;
-  background-color: #e7dfcc;
-  border: none;
-}
-
-/* Style footer */
-footer,
-.img {
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
 }
 
-footer .img img {
-  width: 20%;
-  height: auto;
+/* liens */
+footer a {
+  font-weight: bold;
+  display: inline-block;
 }
 
-footer div .img {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+footer a:hover {
+  color: orange;
 }
 
-footer .text_footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .carrousel li {
-    flex: 0 0 60%;
+/* Responsive */
+@media (min-width: 1024px) {
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
   }
-  .carrousel img,
-  .carrousel video {
-    max-height: 400px;
+
+  .pp {
+    flex: 1;
+  }
+  .text {
+    flex: 2;
+  }
+
+  .img-pp {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .btn {
+    flex-grow: 1;
+  }
+
+  [popover] {
+    left: 40%;
+    top: 30%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .socials {
+    justify-content: center;
   }
 }

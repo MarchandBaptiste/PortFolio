@@ -1,96 +1,137 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- Définition du jeu de caractères -->
     <meta charset="UTF-8" />
-
-    <!-- Adaptation à la taille de l’écran -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Titre affiché dans l’onglet du navigateur -->
+    <meta name="viewport" content="width=device-width" />
     <title>Portfolio - Marchand Baptiste</title>
-
-    <!-- Lien vers la feuille de style -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- Description SEO -->
-    <meta name="description" content="PortFolio de Baptiste Marchand" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <!-- En-tête du site -->
+    <!-- Header -->
     <header>
-      <div class="flex">
-        <div class="img">
-          <img src="./assets/img/PP.jpg" alt="Photo de profil" />
-        </div>
-        <div class="texte">
-          <h1>PortFolio</h1>
-          <h1>Marchand Baptiste</h1>
-        </div>
+      <div class="logo">
+        <img src="./assets/logo/logo.png" alt="Logo" />
       </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#projects">Projets</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Contenu principal -->
-    <main id="accueil">
-      <!-- carrousel -->
-      <section class="carrousel">
-        <h2>Mes projets :</h2>
-        <div>
-          <ul>
-            <li>
-              <h3>Application Python</h3>
-              <img class="img" src="./assets/img/projetABR.png" />
-            </li>
-            <li>
-              <h3>Projet a venir...</h3>
-              <video width="100%" height="300px" autoplay muted loop>
-                <source
-                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
-                  type="video/mp4"
-                />
-                Votre navigateur ne supporte pas la lecture de vidéos.
-              </video>
-            </li>
-            <li>
-              <h3>Projet a venir...</h3>
-              <video width="100%" height="300px" autoplay muted loop>
-                <source
-                  src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
-                  type="video/mp4"
-                />
-                Votre navigateur ne supporte pas la lecture de vidéos.
-              </video>
-            </li>
-          </ul>
+    <!-- Main -->
+    <main>
+      <!--Présentation -->
+      <section class="about">
+        <div class="top">
+          <div class="pp">
+            <img src="./assets/img/PP.jpg" class="img-pp" />
+            <h1>Marchand Baptiste</h1>
+          </div>
+          <div class="text">
+            <h2>À propos</h2>
+            <p>
+              Passionné par le développement et les technologies, j’aime coder
+              dans tous les langages et explorer de nouvelles solutions pour
+              créer des projets innovants. La curiosité et la créativité sont au
+              cœur de ma démarche. Découvrez mes projets.
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <a href="./assets/download/CV.pdf" class="btn" download
+            >Télécharger CV</a
+          >
         </div>
       </section>
-      <section>
-        <button>
-          <a href="./assets/download/CV_Baptiste nov 2025.pdf" download
-            ><img class="img" src="./assets/logo/telechargements-blanc.png" />My
-            resume</a
-          >
-        </button>
+
+      <!--Projets -->
+      <section id="projects" class="projects">
+        <h2>Projets</h2>
+        <div class="project-grid">
+          <!-- Projet 1 -->
+          <div class="project-card">
+            <img src="./assets/img/projetABR.png" alt="Projet ABR" />
+            <div class="project-description">
+              <h3>Application en Python</h3>
+              <a href="https://github.com/MarchandBaptiste/Projet-ABR" class="btn" target="_blank">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="project-card">
+            <img src="./assets/img/logo-bde.png" alt="Logo BDE" />
+            <div class="project-description">
+              <h3>Logo du BDE</h3>
+              <a href="https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/LogoBDEFinal?node-id=0-1&t=Zt3OZc21ztAbbHvP-1" class="btn" target="_blank">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 3 -->
+          <div class="project-card">
+            <img src="./assets/logo/logo-horizontal.svg" alt="Logo horizontal Instant Gaming" />
+            <div class="project-description">
+              <h3>Instant Gaming</h3>
+              <a href="https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1" class="btn" target="_blank">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+          
+          <!-- Projet 4 -->
+          <div class="project-card">
+            <img src="./assets/img/QoBouz.png" alt="Logo Qobouz" />
+            <div class="project-description">
+              <h3>QoBouz</h3>
+              <a href="https://www.figma.com/design/Bahl3BN4uSBbpeK2VZezdn/QoBouz?node-id=0-1&t=U5FWs4KoTjAfw8fW-1" class="btn" target="_blank">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+
+            <!-- Projet 5 -->
+          <div class="project-card">
+            <video width="100%" height="300px" autoplay muted loop>
+              <source
+                src="./assets/video/vecteezy_loading-bar-animation-on-black-background_13470086.mp4"
+                type="video/mp4"
+              />
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <div class="project-description">
+              <h3>A venir</h3>
+              <a href="#" class="btn" target="_blank">
+                En savoir plus
+              </a>
+              </div>
+            </div>
+          </div>
       </section>
     </main>
 
-    <hr />
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer>
-      <div class="img">
-        <img src="./assets/logo/logo.png" alt="" />
-      </div>
-      <div class="text_footer">
-        <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
-        <p>Contact : baptistemarchand2007@gmail.com</p>
+      <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
+      <div class="socials">
+        <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/baptiste-marchand-35b027397/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <span>Contact :</span>
+        <a href="mailto:baptistemarchand2007@gmail.com"
+          >baptistemarchand2007@gmail.com</a
+        >
       </div>
     </footer>
-    <!-- <footer>
-    <div>
-    <a href="#" class="active"><img class="img" src="./assets/logo/home-open.png"></img></a>
-    <a href="#"><img class="img" src="./assets/logo/folder-close.png"</i></a>
-    </div>
-  </footer> -->
   </body>
 </html>
