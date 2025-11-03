@@ -196,24 +196,7 @@ footer a:hover {
   color: orange;
 }
 
-/* Responsive mobile */
-@media (max-width: 768px) {
-  header {
-    padding: 0.5rem 1rem; /* réduit le padding du header */
-  }
 
-  .logo img {
-    width: 6rem; /* réduit la taille du logo */
-  }
-
-  .nav-links {
-    gap: 1rem; /* réduit l'espacement entre les liens */
-  }
-
-  .nav-links a {
-    font-size: 0.9rem; /* réduit légèrement la taille du texte */
-  }
-}
 
 /* Responsive */
 @media (min-width: 1024px) {
