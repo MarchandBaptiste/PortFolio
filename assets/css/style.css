@@ -132,6 +132,10 @@ h2 {
   align-items: center;
 }
 
+.project-card a{
+  color: orange;
+}
+
 .project-card:hover {
   border: 2px solid orange;
   box-shadow: 0 0 10px orange;
@@ -142,7 +146,7 @@ h2 {
   height: 100%;
   object-fit: contain; /* garde les proportions exactes */
   margin-bottom: 0.5rem;
-  border-radius: 8px;
+  border-radius: 5px;
   max-height: 300px;
 }
 
@@ -158,18 +162,7 @@ h2 {
   background-color: black;
 }
 
-[popover] {
-  color: white;
-  padding: 5rem;
-  background: #111;
-  border: 2px solid orange;
-  border-radius: 5px;
-  max-width: 250px;
-  position: fixed;
-  left: 20%;
-  top: 30%;
-  z-index: 1000;
-}
+
 
 /* Style footer */
 footer {
