@@ -57,6 +57,26 @@ header {
   color: orange;
 }
 
+/* Empêcher le changement de couleur du lien après clic */
+a:visited {
+  color: inherit;
+}
+
+/* Forcer l'état cliqué/visité des boutons */
+.btn:visited,
+.btn:active,
+.btn:focus {
+  color: orange;
+  background-color: black;
+  border-color: orange;
+}
+
+/* Optionnel : sur mobile, supprimer le highlight */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 .img-pp {
   width: 70%;
   height: auto;
