@@ -49,10 +49,11 @@ header {
 .nav-links a {
   font-size: 0.9rem; 
 }
+.nav-links a:visited{
+  color: white;
+}
 
-.nav-links a:hover,
-a:focus,
-a:visited {
+.nav-links a:hover{
   color: orange;
 }
 
@@ -96,8 +97,7 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.btn:hover,
-.btn:visited {
+.btn:hover{
   background-color: orange;
   color: black;
   box-shadow: 0 0 10px orange;
