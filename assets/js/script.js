@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById("projects-container");
-      if (!container) return; // sécurité si l'élément est introuvable
 
       data.forEach(project => {
         const card = document.createElement("div");
@@ -32,26 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(card);
       });
     })
-    .catch(err => console.error('Erreur chargement projects.json:', err));
 
   // Fermer modal
   const closeBtn = document.getElementById("close-modal");
   const modal = document.getElementById("project-modal");
-
+  // Fermer en cliquant sur la croix
   if (closeBtn && modal) {
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
   }
 
-  // Fermer en cliquant sur l'overlay (si modal contient overlay séparé)
+  // Fermer en cliquant en dehor de l'overlay
   if (modal) {
     modal.addEventListener('click', (e) => {
       // si on clique en dehors de .modal-content
       if (e.target === modal) modal.style.display = 'none';
     });
 
-    // Fermer avec ESC
+    // Fermer avec Echap
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') modal.style.display = 'none';
     });

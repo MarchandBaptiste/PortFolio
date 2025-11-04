@@ -4,18 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-a,
-a:hover,
-a:focus,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  vertical-align: middle;
-}
 
-/* Style */
 body {
   background-color: black;
   color: white;
@@ -23,7 +12,13 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Style header */
+a, button {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent; /* supprime surbrillance sur mobile */
+}
+
+/* header */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,31 +44,33 @@ header {
 .nav-links a {
   font-size: 0.9rem; 
 }
-.nav-links a:visited{
-  color: white;
-}
 
-.nav-links a:hover{
+.nav-links a:hover {
   color: orange;
 }
 
-a:visited {
-  color: inherit;
-}
-
-.btn:visited,
-.btn:active,
-.btn:focus {
+/* boutons */
+.btn {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: 2px solid orange;
   color: orange;
-  background-color: black;
-  border-color: orange;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-a, button {
-  -webkit-tap-highlight-color: transparent;
+.btn:hover {
+  background-color: orange;
+  color: black;
+  box-shadow: 0 0 10px orange;
 }
 
-
+/* about */
 .img-pp {
   width: 70%;
   height: auto;
@@ -87,7 +84,7 @@ a, button {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 5rem 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -96,41 +93,18 @@ h1 {
   padding-top: 1.5rem;
   padding-bottom: 3rem;
 }
+
 h2 {
   padding-bottom: 1.5rem;
 }
 
-.btn {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  border: 2px solid;
-  color: orange;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn:hover{
-  background-color: orange;
-  color: black;
-  box-shadow: 0 0 10px orange;
-  border-color: orange;
-}
-
+/* projects */
 .projects {
-  padding-bottom: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem 5rem;
 }
 
 .projects h2 {
-  padding: 2rem;
-  padding-top: 9rem;
-  padding-left: 4rem;
+  padding: 9rem 0 2rem 4rem;
   margin: 0 auto;
 }
 
@@ -144,14 +118,14 @@ h2 {
   background-color: #111;
   border: 2px solid transparent;
   padding: 1rem;
-  transition: all 0.3s ease;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
-.project-card a{
+.project-card a {
   color: orange;
 }
 
@@ -163,7 +137,7 @@ h2 {
 .project-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* garde les proportions exactes */
+  object-fit: contain;
   margin-bottom: 0.5rem;
   border-radius: 5px;
   max-height: 300px;
@@ -177,35 +151,28 @@ h2 {
   align-items: center;
 }
 
-.project-card button {
-  background-color: black;
-}
-
+/* modal */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
+  display: none;
 }
 
 .modal-content {
-  background: #111;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
   padding: 2rem;
   border-radius: 10px;
   border: 2px solid orange;
   text-align: center;
   width: 90%;
   max-width: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
 }
 
 .modal-content img {
@@ -223,14 +190,13 @@ h2 {
   width: fit-content;
 }
 
-
 #close-modal {
   position: absolute;
   top: 1rem;
   right: 1rem;
   cursor: pointer;
   color: white;
-  font-size: 24px;
+  font-size: 35px;
   transition: color 0.3s ease;
 }
 
@@ -238,8 +204,7 @@ h2 {
   color: orange;
 }
 
-
-/* Style footer */
+/* footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -262,19 +227,11 @@ footer .socials {
   align-items: center;
 }
 
-/* liens */
-footer a {
-  font-weight: bold;
-  display: inline-block;
-}
-
 footer a:hover {
   color: orange;
 }
 
-
-
-/* Responsive */
+/* responsive */
 @media (min-width: 1024px) {
   .top {
     display: flex;
@@ -295,23 +252,9 @@ footer a:hover {
   .img-pp {
     width: 400px;
     height: auto;
-    border-radius: 10px;
   }
 
   .btn {
     flex-grow: 1;
-  }
-
-  [popover] {
-    left: 40%;
-    top: 30%;
-  }
-
-  footer {
-    flex-direction: column;
-  }
-
-  footer .socials {
-    justify-content: center;
   }
 }
