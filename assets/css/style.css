@@ -53,8 +53,7 @@ header {
   color: white;
 }
 
-.nav-links a:hover,
-a:focus{
+.nav-links a:hover{
   color: orange;
 }
 
@@ -98,7 +97,7 @@ h2 {
   transition: all 0.3s ease;
 }
 
-.btn:hover, btn:visited{
+.btn:hover{
   background-color: orange;
   color: black;
   box-shadow: 0 0 10px orange;
