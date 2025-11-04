@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Application en Python",
+    "image": "./assets/img/projetABR.png",
+    "description": "Application Python permettant de gérer un arbre binaire.",
+    "link": "https://github.com/MarchandBaptiste/Projet-ABR"
+  },
+  {
+    "id": 2,
+    "title": "Logo du BDE",
+    "image": "./assets/img/logo-bde.png",
+    "description": "Création du logo du BDE via Figma.",
+    "link": "https://www.figma.com"
+  }
+]

@@ -57,12 +57,10 @@ header {
   color: orange;
 }
 
-/* Empêcher le changement de couleur du lien après clic */
 a:visited {
   color: inherit;
 }
 
-/* Forcer l'état cliqué/visité des boutons */
 .btn:visited,
 .btn:active,
 .btn:focus {
@@ -71,7 +69,6 @@ a:visited {
   border-color: orange;
 }
 
-/* Optionnel : sur mobile, supprimer le highlight */
 a, button {
   -webkit-tap-highlight-color: transparent;
 }
@@ -183,6 +180,40 @@ h2 {
 .project-card button {
   background-color: black;
 }
+
+.modal {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  display: block;
+  margin-left: auto;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 
 /* Style footer */
 footer {
