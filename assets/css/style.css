@@ -46,37 +46,17 @@ header {
 }
 
 .nav-links a:hover {
-  color: orange;
-}
-
-/* boutons */
-.btn {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  border: 2px solid orange;
-  color: orange;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: orange;
-  color: black;
-  box-shadow: 0 0 10px orange;
+  color: rgb(231, 121, 41);
 }
 
 /* about */
 .img-pp {
-  width: 70%;
+  width: 60%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
+/* about */
 .about {
   display: flex;
   flex-direction: column;
@@ -98,14 +78,103 @@ h2 {
   padding-bottom: 1.5rem;
 }
 
+/* boutton */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-top: 0;
+  border-radius: 50%;
+  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%);
+  box-shadow: 0 0 10px rgb(231, 121, 41);
+}
+
+.btn-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.14rem 2rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+    linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+  color: white;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) padding-box,
+              linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+  box-shadow: 0 0 10px rgb(231, 121, 41);
+}
+
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+.resume-btn {
+  display: flex;
+  justify-content: center;
+}
+
+
+.logo-link {
+  width: 28px;
+  height: 28px;
+}
+
 /* projects */
 .projects {
   padding: 0 1rem 5rem;
 }
 
 .projects h2 {
-  padding: 9rem 0 2rem 4rem;
+  padding: 9rem 0 2rem 2rem;
   margin: 0 auto;
+}
+
+/* filtres projets */
+.filters {
+  display: flex;
+  justify-content: left;
+  gap: 0.6rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.18s ease;
+}
+.filter-btn:hover {
+  border-color: rgba(231,121,41,0.8);
+  color: rgb(231,121,41);
+}
+.filter-btn.active {
+  background: linear-gradient(94.8deg, rgb(231,121,41), rgb(163,43,43));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(231,121,41,0.25);
 }
 
 .project-grid {
@@ -126,12 +195,12 @@ h2 {
 }
 
 .project-card a {
-  color: orange;
+  color: rgb(231, 121, 41);
 }
 
 .project-card:hover {
-  border: 2px solid orange;
-  box-shadow: 0 0 10px orange;
+  border: 2px solid rgb(231, 121, 41);
+  box-shadow: 0 0 10px rgb(231, 121, 41);
 }
 
 .project-card img {
@@ -168,7 +237,7 @@ h2 {
   background-color: #111;
   padding: 2rem;
   border-radius: 10px;
-  border: 2px solid orange;
+  border: 2px solid rgb(231, 121, 41);
   text-align: center;
   width: 90%;
   max-width: 500px;
@@ -196,39 +265,12 @@ h2 {
   right: 1rem;
   cursor: pointer;
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   transition: color 0.3s ease;
 }
 
 #close-modal:hover {
-  color: orange;
-}
-
-/* footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 3px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-footer p {
-  margin-bottom: 1rem;
-}
-
-footer .socials {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-footer a:hover {
-  color: orange;
+  color: rgb(231, 121, 41);
 }
 
 /* responsive */
@@ -252,9 +294,5 @@ footer a:hover {
   .img-pp {
     width: 400px;
     height: auto;
-  }
-
-  .btn {
-    flex-grow: 1;
   }
 }

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header>
     <div class="logo">
       <img src="./assets/logo/logo.png" alt="Logo" />
@@ -26,7 +25,6 @@
 
   <!-- Main -->
   <main>
-    <!--Présentation -->
     <section class="about">
       <div class="top">
         <div class="pp">
@@ -41,45 +39,51 @@
             créer des projets innovants. La curiosité et la créativité sont au
             cœur de ma démarche. Découvrez mes projets.
           </p>
+          <div class="link">
+            <a href="https://github.com/MarchandBaptiste" class="btn" target="_blank"><img
+                src="./assets/logo/github-logo.png" class="logo-link"></a>
+            <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" class="btn" target="_blank"><img
+                src="./assets/logo/linkedin-logo.png" class="logo-link"></a>
+            <a href="mailto:baptistemarchand2007@gmail.com" class="btn"><img src="./assets/logo/email.png"
+                class="logo-link"></a>
+          </div>
+
+          <div class="resume-btn">
+            <a href="./assets/download/CV-MARCHAND-Baptiste.pdf" class="btn-link" download>My Resume</a>
+          </div>
+
         </div>
-      </div>
-      <div class="bouttom">
-        <a href="./assets/download/CV-MARCHAND-Baptiste.pdf" class="btn" download>Télécharger CV</a>
-      </div>
     </section>
 
-    <!--Projets -->
     <section id="projects" class="projects">
       <h2>Projets</h2>
-      <!-- Ici JS va injecter tes cards -->
+      <!-- Filtres pour afficher par type -->
+      <div class="filters" aria-label="Filtrer les projets">
+        <button class="filter-btn active" data-type="all">Tous</button>
+        <button class="filter-btn" data-type="dev">Programmation</button>
+        <button class="filter-btn" data-type="design">Design</button>
+      </div>
+
+      <!--injecte les cards -->
       <div id="projects-container" class="project-grid"></div>
     </section>
 
     <!-- Modal pour l'affichage d'un projet -->
     <div id="project-modal" class="modal" style="display:none;">
       <div class="modal-content">
-        <span id="close-modal" style="cursor:pointer;font-size:20px;">✖</span>
+        <span id="close-modal">✖</span>
         <h2 id="modal-title"></h2>
-        <img id="modal-img" style="width:100%;max-width:300px;">
+        <img id="modal-img"">
         <p id="modal-desc"></p>
         <div>
-          <a id="modal-link" class="btn" target="_blank">Voir le projet</a>
+          <a id="modal-link" class="btn-link" target="_blank">Voir le projet</a>
         </div>
       </div>
     </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Baptiste Marchand. Tous droits réservés.</p>
-    <div class="socials">
-      <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" target="_blank">LinkedIn</a>
-      <span>Contact :</span>
-      <a href="mailto:baptistemarchand2007@gmail.com">baptistemarchand2007@gmail.com</a>
-    </div>
-  </footer>
+
 </body>
 
 </html>
