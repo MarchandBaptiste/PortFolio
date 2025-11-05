@@ -4,27 +4,31 @@
     "title": "Application en Python",
     "image": "./assets/img/projetABR.png",
     "description": "Application Python permettant de gérer un arbre binaire.",
-    "link": "https://github.com/MarchandBaptiste/Projet-ABR"
+    "link": "https://github.com/MarchandBaptiste/Projet-ABR",
+    "type": "dev"
   },
   {
     "id": 2,
     "title": "Logo du BDE",
     "image": "./assets/img/logo-bde.png",
     "description": "Création du logo du BDE via Figma.",
-    "link": "https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/Logo_BDE?node-id=0-1&t=w48cm1V8Qfmbj9xW-1"
+    "link": "https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/Logo_BDE?node-id=0-1&t=w48cm1V8Qfmbj9xW-1",
+    "type": "design"
   },
   {
     "id": 3,
     "title": "Instant Gaming",
     "image": "./assets/logo/logo-horizontal.svg",
     "description": "Maquette d’Instant Gaming afin de m’initier à la conception d’interface sur Figma.",
-    "link": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1"
+    "link": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1",
+    "type": "design"
   },
   {
     "id": 4,
     "title": "QoBouz",
     "image": "./assets/img/QoBouz.png",
-    "description": "Création d’une application musicale en respectant des contraintes UI.",
-    "link": "https://www.figma.com/design/Bahl3BN4uSBbpeK2VZezdn/QoBouz?node-id=0-1&t=U5FWs4KoTjAfw8fW-1"
+    "description": "Création d’une application musicale en respectant des contraintes UI sur Figma.",
+    "link": "https://www.figma.com/design/Bahl3BN4uSBbpeK2VZezdn/QoBouz?node-id=0-1&t=U5FWs4KoTjAfw8fW-1",
+    "type": "design"
   }
 ]
