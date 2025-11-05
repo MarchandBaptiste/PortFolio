@@ -24,7 +24,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: black;
+  /* Effet glass */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
   z-index: 10;
