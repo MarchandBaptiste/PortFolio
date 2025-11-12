@@ -28,7 +28,7 @@ header {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   /*  */
   position: fixed;
   width: 100%;
@@ -197,6 +197,7 @@ h2 {
   align-items: center;
   transition: all 0.3s ease;
   max-width:600px;
+  border-radius: 10px;
 }
 
 .project-card a {
