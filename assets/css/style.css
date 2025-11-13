@@ -187,6 +187,17 @@ h2 {
   gap: 2rem;
 }
 
+.projects{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.projects.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .project-card {
   background-color: #111;
   border: 2px solid transparent;
@@ -199,6 +210,7 @@ h2 {
   max-width:600px;
   border-radius: 10px;
 }
+
 
 .project-card a {
   color: rgb(231, 121, 41);
