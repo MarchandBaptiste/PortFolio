@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: rgb(231, 121, 41);
+  color: white;
+}
+
 body {
   background-color: black;
   color: white;
