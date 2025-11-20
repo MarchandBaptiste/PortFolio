@@ -30,5 +30,22 @@
     "description": "Création d’une application musicale en respectant des contraintes UI sur Figma.",
     "link": "https://www.figma.com/design/Bahl3BN4uSBbpeK2VZezdn/QoBouz?node-id=0-1&t=U5FWs4KoTjAfw8fW-1",
     "type": "design"
+  },
+  {
+    "id": 5,
+    "title": "ParkEase",
+    "image": "./assets/img/Logo_ParkEase.svg",
+    "description": "Création d’une application de paiement de parking en respectant des contraintes UI sur Figma.",
+    "link": "https://www.figma.com/design/lN80s30j8RGZ5gUA9Dj2aT/ParkEase?node-id=0-1&t=tBFnRpS38eXhmGvp-1",
+    "type": "design"
+  },
+  {
+    "id": 6,
+    "title": "Bon Appétit",
+    "image": "./assets/img/chef_dark.jpg",
+    "description": "Création d’un site pour un restaurant en HTML et CSS, avec design réalisé sur Figma, dans le cadre d’un projet de groupe respectant des contraintes UI.",
+    "link": "https://github.com/BonAppetit-Corentin-Baptiste/Projet-Michel-Bouillon",
+    "type": "dev"
   }
+
 ]
