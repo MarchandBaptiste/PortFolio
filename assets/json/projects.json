@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Logo du BDE",
     "image": "./assets/img/logo-bde.png",
-    "description": "Création du logo du BDE via Figma.",
+    "description": "Conception du logo officiel du BDE (Bureau des Étudiants) sur Figma.",
     "link": "https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/Logo_BDE?node-id=0-1&t=w48cm1V8Qfmbj9xW-1",
     "type": "design"
   },
@@ -19,33 +19,32 @@
     "id": 3,
     "title": "Instant Gaming",
     "image": "./assets/img/logo-horizonta-instantGamingl.png",
-    "description": "Maquette d’Instant Gaming afin de m’initier à la conception d’interface sur Figma.",
+    "description": "Maquette UI/UX du site Instant Gaming réalisée sur Figma. Projet d'initiation à la conception d'interface.",
     "link": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1",
     "type": "design"
   },
   {
     "id": 4,
-    "title": "QoBouz",
-    "image": "./assets/img/QoBouz.png",
-    "description": "Création d’une application musicale en respectant des contraintes UI sur Figma.",
-    "link": "https://www.figma.com/design/Bahl3BN4uSBbpeK2VZezdn/QoBouz?node-id=0-1&t=U5FWs4KoTjAfw8fW-1",
-    "type": "design"
-  },
-  {
-    "id": 5,
     "title": "ParkEase",
     "image": "assets/img/Logo_ParkEase 2.png",
-    "description": "Création d’une application de paiement de parking en respectant des contraintes UI sur Figma.",
+    "description": "Conception UX/UI complète (Figma) de l'application mobile ParkEase (paiement de parking). Ce projet a mis l'accent sur le respect des contraintes d'interface utilisateur et l'optimisation du parcours utilisateur.",
     "link": "https://www.figma.com/design/lN80s30j8RGZ5gUA9Dj2aT/ParkEase?node-id=0-1&t=tBFnRpS38eXhmGvp-1",
     "type": "design"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Bon Appétit",
     "image": "./assets/img/chef_dark.jpg",
-    "description": "Création d’un site pour un restaurant en HTML et CSS, avec design réalisé sur Figma, dans le cadre d’un projet de groupe respectant des contraintes UI.",
+    "description": "Développement Front-end (HTML/CSS) d'un site vitrine pour restaurant. Le projet de groupe incluait la création complète de la charte graphique, du design UI/UX sur Figma et l'intégration du Front-end.",
     "link": "https://github.com/BonAppetit-Corentin-Baptiste/Projet-Michel-Bouillon",
     "type": "dev"
+  },
+  {
+    "id": 6,
+    "title": "Campus Flow",
+    "image": "./assets/img/campusFlow.png",
+    "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",
+    "link": "https://www.figma.com/design/UmipPWnlVkLIaXJvKkmIc2/Campus-Flow?node-id=0-1&t=BI7dCyRz8xEmm09U-1",
+    "type": "design"
   }
-
 ]
