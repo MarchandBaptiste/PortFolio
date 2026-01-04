@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   let projectsData = [];
 
+  // animation au défilement
   function checkCards() {
     const cards = document.querySelectorAll(".projects");
     const trigger = window.innerHeight * 0.7;
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // p = projet
   function applyFilter(type) {
     if (type === "all") renderProjects(projectsData);
     else renderProjects(projectsData.filter((p) => p.type === type));

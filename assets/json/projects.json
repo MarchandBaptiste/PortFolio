@@ -46,5 +46,13 @@
     "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",
     "link": "https://www.figma.com/design/UmipPWnlVkLIaXJvKkmIc2/Campus-Flow?node-id=0-1&t=BI7dCyRz8xEmm09U-1",
     "type": "design"
+  },
+  {
+    "id": 7,
+    "title": "Ciné-Radar",
+    "image": "./assets/img/cineradar.png",
+    "description": "Ce projet est une application web permettant d'explorer le catalogue mondial de films et de séries en temps réel, en exploitant les données de l'API TMDB.",
+    "link": "https://github.com/MarchandBaptiste/cineRadar?tab=readme-ov-file",
+    "type": "dev"
   }
 ]
