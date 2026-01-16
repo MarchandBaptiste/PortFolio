@@ -25,14 +25,6 @@
   },
   {
     "id": 4,
-    "title": "ParkEase",
-    "image": "assets/img/Logo_ParkEase 2.png",
-    "description": "Conception UX/UI complète (Figma) de l'application mobile ParkEase (paiement de parking). Ce projet a mis l'accent sur le respect des contraintes d'interface utilisateur et l'optimisation du parcours utilisateur.",
-    "link": "https://www.figma.com/design/lN80s30j8RGZ5gUA9Dj2aT/ParkEase?node-id=0-1&t=tBFnRpS38eXhmGvp-1",
-    "type": "design"
-  },
-  {
-    "id": 5,
     "title": "Bon Appétit",
     "image": "./assets/img/chef_dark.jpg",
     "description": "Développement Front-end (HTML/CSS) d'un site vitrine pour restaurant. Le projet de groupe incluait la création complète de la charte graphique, du design UI/UX sur Figma et l'intégration du Front-end.",
@@ -40,7 +32,7 @@
     "type": "dev"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Campus Flow",
     "image": "./assets/img/campusFlow.png",
     "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",

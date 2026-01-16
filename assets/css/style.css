@@ -17,7 +17,8 @@ body {
   scroll-behavior: smooth;
 }
 
-a, button {
+a,
+button {
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -28,7 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
   /* Effet glass */
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
@@ -52,7 +53,7 @@ header {
 }
 
 .nav-links a {
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 
 .nav-links a:hover {
@@ -97,12 +98,20 @@ h2 {
   height: 60px;
   margin-top: 0;
   border-radius: 50%;
-  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%);
+  background: linear-gradient(
+    94.8073deg,
+    rgb(231, 121, 41) 0%,
+    rgb(163, 43, 43) 100%
+  );
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%);
+  background: linear-gradient(
+    94.8073deg,
+    rgb(231, 121, 41) 0%,
+    rgb(163, 43, 43) 100%
+  );
   box-shadow: 0 0 10px rgb(231, 121, 41);
 }
 
@@ -114,9 +123,10 @@ h2 {
   margin-top: 1rem;
   border-radius: 50px;
   border: 2px solid transparent;
-  background: 
+  background:
     linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
-    linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+    linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      border-box;
   color: white;
   white-space: nowrap;
   font-size: 0.9rem;
@@ -124,12 +134,15 @@ h2 {
 }
 
 .btn-link:hover {
-  background: linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) padding-box,
-              linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+  background:
+    linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      padding-box,
+    linear-gradient(94.8073deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      border-box;
   box-shadow: 0 0 10px rgb(231, 121, 41);
 }
 
-.link{
+.link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +165,7 @@ h2 {
 }
 
 .projects h2 {
-  padding: 9rem 0 2rem 2rem;
+  padding: 9rem 0 2rem 1rem;
   margin: 0 auto;
 }
 
@@ -162,13 +175,13 @@ h2 {
   justify-content: left;
   gap: 0.6rem;
   padding: 1rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   flex-wrap: wrap;
 }
 .filter-btn {
   background: transparent;
   color: white;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
   cursor: pointer;
@@ -176,14 +189,14 @@ h2 {
   transition: all 0.18s ease;
 }
 .filter-btn:hover {
-  border-color: rgba(231,121,41,0.8);
-  color: rgb(231,121,41);
+  border-color: rgba(231, 121, 41, 0.8);
+  color: rgb(231, 121, 41);
 }
 .filter-btn.active {
-  background: linear-gradient(94.8deg, rgb(231,121,41), rgb(163,43,43));
+  background: linear-gradient(94.8deg, rgb(231, 121, 41), rgb(163, 43, 43));
   color: white;
   border-color: transparent;
-  box-shadow: 0 0 10px rgba(231,121,41,0.25);
+  box-shadow: 0 0 10px rgba(231, 121, 41, 0.25);
 }
 
 .project-grid {
@@ -200,10 +213,12 @@ h2 {
   display: none;
 }
 
-.projects{
+.projects {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .projects.visible {
@@ -225,7 +240,6 @@ h2 {
   border-radius: 10px;
   scroll-snap-align: center;
 }
-
 
 .project-card a {
   color: rgb(231, 121, 41);
@@ -282,7 +296,7 @@ h2 {
   border-radius: 8px;
 }
 
-.modal-content p{
+.modal-content p {
   padding-top: 1rem;
 }
 
@@ -318,16 +332,23 @@ h2 {
     width: 100%;
     max-width: 1000px;
   }
-
   .pp {
     flex: 1;
   }
   .text {
     flex: 2;
   }
-  
+
   .img-pp {
     width: 400px;
     height: auto;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 20px 0;
   }
 }
