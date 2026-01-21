@@ -46,5 +46,13 @@
     "description": "Reproduction d'une landing page complexe réalisée dans le cadre de mes études, sur mon temps libre. L'objectif était de valider mes compétences en intégration responsive et en manipulation du DOM.",
     "link": "https://github.com/MarchandBaptiste/blogr-landing-page-main",
     "type": "dev"
+  },
+  {
+    "id": 7,
+    "title": "Sunnyside",
+    "image": "./assets/img/sunnyside.jpg",
+    "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre. Ce challenge m'a permis de travailler spécifiquement sur la mise en page asymétrique et la gestion des grilles d'images responsives.",
+    "link": "https://github.com/MarchandBaptiste/sunnyside-agency-landing-page?tab=readme-ov-file",
+    "type": "dev"
   }
 ]
