@@ -52,7 +52,15 @@
     "title": "Sunnyside",
     "image": "./assets/img/sunnyside.jpg",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre. Ce challenge m'a permis de travailler spécifiquement sur la mise en page asymétrique et la gestion des grilles d'images responsives.",
-    "link": "https://github.com/MarchandBaptiste/sunnyside-agency-landing-page?tab=readme-ov-file",
+    "link": "https://github.com/MarchandBaptiste/sunnyside-agency-landing-page",
+    "type": "dev"
+  },
+  {
+    "id": 8,
+    "title": "Manage",
+    "image": "./assets/img/manage.jpg",
+    "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre.",
+    "link": "https://github.com/MarchandBaptiste/manage-landing-page-master",
     "type": "dev"
   }
 ]
