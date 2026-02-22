@@ -190,17 +190,6 @@ header {
   color: var(--orange);
 }
 
-.hero-tagline {
-  font-family: "Syne", sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 24px;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.35s forwards;
-}
-
 .hero-bio {
   font-size: 1rem;
   line-height: 1.8;
@@ -301,7 +290,6 @@ header {
 /* PROJECTS */
 .projects {
   padding: 100px 6vw;
-  border-top: 1px solid var(--border);
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
