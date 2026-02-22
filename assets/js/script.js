@@ -4,109 +4,109 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   let projectsData = [];
 
-  // animation au défilement
-  function checkCards() {
-    const cards = document.querySelectorAll(".projects");
-    const trigger = window.innerHeight * 0.7;
-
-    cards.forEach((card) => {
-      const top = card.getBoundingClientRect().top;
-
-      if (top < trigger) {
-        card.classList.add("visible");
-      } else {
-        card.classList.remove("visible");
+  // Scroll reveal
+  function checkVisibility() {
+    document.querySelectorAll(".projects").forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.85) {
+        el.classList.add("visible");
       }
     });
   }
+  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("load", checkVisibility);
 
-  window.addEventListener("scroll", checkCards);
-  window.addEventListener("load", checkCards);
-
+  // Render cards
   function renderProjects(list) {
     container.innerHTML = "";
+
     if (!list || list.length === 0) {
-      const p = document.createElement("p");
-      p.textContent = "Aucun projet à afficher.";
-      p.style.textAlign = "center";
-      container.appendChild(p);
+      container.innerHTML = `<p style="color:rgba(255,255,255,0.4);text-align:center;padding:40px 0;">Aucun projet à afficher.</p>`;
       return;
     }
 
     list.forEach((project) => {
       const card = document.createElement("div");
       card.classList.add("project-card");
+
+      // Badges techno (champ "techs" optionnel dans le JSON)
+      const techBadges = project.techs
+        ? project.techs.map(t => `<span class="tech-badge">${t}</span>`).join("")
+        : "";
+
       card.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
-        <h3>${project.title}</h3>
+        <div class="card-img-wrapper">
+          <img src="${project.image}" alt="${project.title}" loading="lazy">
+        </div>
+        <div class="project-description">
+          ${techBadges ? `<div class="project-techs">${techBadges}</div>` : ""}
+          <h3>${project.title}</h3>
+          ${project.description ? `<p>${project.description.slice(0, 100)}${project.description.length > 100 ? "..." : ""}</p>` : ""}
+          <span class="project-cta">Voir le projet →</span>
+        </div>
       `;
 
-      card.addEventListener("click", () => {
-        const titleEl = document.getElementById("modal-title");
-        const imgEl = document.getElementById("modal-img");
-        const descEl = document.getElementById("modal-desc");
-        const linkEl = document.getElementById("modal-link");
-        const modal = document.getElementById("project-modal");
-
-        if (titleEl) titleEl.textContent = project.title;
-        if (imgEl) imgEl.src = project.image;
-        if (descEl) descEl.textContent = project.description;
-        if (linkEl) linkEl.href = project.link;
-        if (modal) modal.style.display = "block";
-      });
-
+      card.addEventListener("click", () => openModal(project));
       container.appendChild(card);
     });
   }
 
+  // Modal
+  function openModal(project) {
+    const modal = document.getElementById("project-modal");
+    document.getElementById("modal-title").textContent = project.title;
+    document.getElementById("modal-img").src = project.image;
+    document.getElementById("modal-img").alt = project.title;
+    document.getElementById("modal-desc").textContent = project.description || "";
+    document.getElementById("modal-link").href = project.link || "#";
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    document.getElementById("project-modal").style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  const closeBtn = document.getElementById("close-modal");
+  const modal = document.getElementById("project-modal");
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+
+  // Filtres
   function setActive(type) {
-    filterButtons.forEach((btn) => {
+    filterButtons.forEach(btn => {
       btn.classList.toggle("active", btn.dataset.type === type);
     });
   }
 
-  // p = projet
   function applyFilter(type) {
-    if (type === "all") renderProjects(projectsData);
-    else renderProjects(projectsData.filter((p) => p.type === type));
+    const list = type === "all" ? projectsData : projectsData.filter(p => p.type === type);
+    renderProjects(list);
   }
 
-  // Charger les projets
-  fetch(projectsUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      projectsData = data;
-      renderProjects(projectsData);
-    })
-    .catch((err) => {
-      console.error("Erreur chargement projets:", err);
-      container.innerHTML =
-        '<p style="text-align:center">Impossible de charger les projets.</p>';
-    });
-
-  // Attacher les filtres
-  filterButtons.forEach((btn) => {
+  filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      const type = btn.dataset.type;
-      setActive(type);
-      applyFilter(type);
+      setActive(btn.dataset.type);
+      applyFilter(btn.dataset.type);
     });
   });
 
-  // Modal fermeture
-  const closeBtn = document.getElementById("close-modal");
-  const modal = document.getElementById("project-modal");
-  if (closeBtn && modal) {
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
+  // Chargement JSON
+  fetch(projectsUrl)
+    .then(res => res.json())
+    .then(data => {
+      projectsData = data;
+      renderProjects(projectsData);
+    })
+    .catch(err => {
+      console.error("Erreur chargement projets:", err);
+      container.innerHTML = `<p style="color:rgba(255,255,255,0.4);text-align:center;padding:40px 0;">Impossible de charger les projets.</p>`;
     });
-  }
-  if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") modal.style.display = "none";
-    });
-  }
 });

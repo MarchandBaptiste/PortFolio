@@ -7,7 +7,7 @@
   <title>Portfolio - Marchand Baptiste</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="icon" type="image/jpg" href="./assets/logo/logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <script src="./assets/js/script.js" defer></script>
 </head>
 
@@ -18,72 +18,89 @@
     </div>
     <nav>
       <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
         <li><a href="#projects">Projets</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main -->
   <main>
-    <section class="about">
-      <div class="top">
-        <div class="pp">
-          <img src="./assets/img/PP.jpg" class="img-pp" />
-          <h1>Marchand Baptiste</h1>
+    <section class="hero" id="about">
+      <div class="hero-inner">
+
+        <div class="hero-photo">
+          <div class="photo-wrapper">
+            <img src="./assets/img/PP.png" class="img-pp" alt="Baptiste Marchand" />
+            <div class="photo-border"></div>
+          </div>
         </div>
-        <div class="text">
-          <h2>À propos</h2>
-          <p>
-            Passionné par le développement et les technologies, j’aime coder
-            dans tous les langages et explorer de nouvelles solutions pour
-            créer des projets innovants. La curiosité et la créativité sont au
-            cœur de ma démarche. Découvrez mes projets.
+
+        <div class="hero-content">
+          <h1 class="hero-name">Marchand<br><span class="name-accent">Baptiste</span></h1>
+          <p class="hero-bio">
+            Passionné par le développement et les technologies, j'aime coder
+            et explorer de nouvelles solutions pour créer des projets innovants.
+            La curiosité et la créativité sont au cœur de ma démarche.
           </p>
-          <div class="link">
-            <a href="https://github.com/MarchandBaptiste" class="btn" target="_blank"><img
-                src="./assets/logo/github-logo.png" class="logo-link"></a>
-            <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" class="btn" target="_blank"><img
-                src="./assets/logo/linkedin-logo.png" class="logo-link"></a>
-            <a href="mailto:baptistemarchand2007@gmail.com" class="btn"><img src="./assets/logo/email.png"
-                class="logo-link"></a>
+          <div class="hero-skills">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">PHP</span>
           </div>
-
-          <div class="resume-btn">
-            <a href="./assets/download/CV-MARCHAND-Baptiste.pdf" class="btn-link" download>My Resume</a>
+          <div class="hero-actions">
+            <a href="./assets/download/CV-MARCHAND-Baptiste.pdf" class="btn-primary" download>My Resume</a>
+            <div class="social-icons">
+              <a href="https://github.com/MarchandBaptiste" class="icon-btn" target="_blank" aria-label="GitHub">
+                <img src="./assets/logo/github-logo.png" class="logo-link" alt="GitHub">
+              </a>
+              <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" class="icon-btn" target="_blank" aria-label="LinkedIn">
+                <img src="./assets/logo/linkedin-logo.png" class="logo-link" alt="LinkedIn">
+              </a>
+              <a href="mailto:baptistemarchand2007@gmail.com" class="icon-btn" aria-label="Email">
+                <img src="./assets/logo/email.png" class="logo-link" alt="Email">
+              </a>
+            </div>
           </div>
-
         </div>
-    </section>
 
+      </div>
+    </section>
     <section id="projects" class="projects">
-      <h2>Projets</h2>
-      <!-- Filtres pour afficher par type -->
+      <div class="section-header">
+        <span class="section-tag">— Mes réalisations</span>
+        <h2 class="section-title">Projets</h2>
+      </div>
       <div class="filters" aria-label="Filtrer les projets">
         <button class="filter-btn active" data-type="all">Tous</button>
         <button class="filter-btn" data-type="dev">Développement</button>
         <button class="filter-btn" data-type="design">Design</button>
       </div>
-
-      <!--injecte les cards -->
       <div id="projects-container" class="project-grid"></div>
     </section>
 
-    <!-- Modal pour l'affichage d'un projet -->
     <div id="project-modal" class="modal" style="display:none;">
       <div class="modal-content">
         <span id="close-modal">✖</span>
         <h2 id="modal-title"></h2>
-        <img id="modal-img"">
+        <img id="modal-img" alt="">
         <p id="modal-desc"></p>
         <div>
-          <a id="modal-link" class="btn-link" target="_blank">Voir le projet</a>
+          <a id="modal-link" class="btn-primary" target="_blank">Voir le projet</a>
         </div>
       </div>
     </div>
-    </section>
-  </main>
 
+  </main>
+  <footer>
+    <span class="footer-copy">© 2026 Marchand Baptiste</span>
+    <div class="footer-links">
+      <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/baptiste-marchand-35b027397/" target="_blank">LinkedIn</a>
+      <a href="mailto:baptistemarchand2007@gmail.com">Email</a>
+    </div>
+  </footer>
 
 </body>
-
 </html>
