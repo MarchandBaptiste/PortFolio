@@ -5,7 +5,8 @@
     "image": "./assets/img/projetABR.png",
     "description": "Application Python permettant de gérer un arbre binaire.",
     "link": "https://github.com/MarchandBaptiste/Projet-ABR",
-    "type": "dev"
+    "type": "dev",
+    "techBadges": "Python | Tkinter"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "image": "./assets/img/logo-bde.png",
     "description": "Conception du logo officiel du BDE (Bureau des Étudiants) sur Figma.",
     "link": "https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/Logo_BDE?node-id=0-1&t=w48cm1V8Qfmbj9xW-1",
-    "type": "design"
+    "type": "design",
+    "techBadges": "Figma"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "image": "./assets/img/pageinstantgaming.png",
     "description": "Maquette UI/UX du site Instant Gaming réalisée sur Figma. Projet d'initiation à la conception d'interface.",
     "link": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1",
-    "type": "design"
+    "type": "design",
+    "techBadges": "UX | UI | Figma"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "image": "./assets/img/chef_dark.jpg",
     "description": "Développement Front-end (HTML/CSS) d'un site vitrine pour restaurant. Le projet de groupe incluait la création complète de la charte graphique, du design UI/UX sur Figma et l'intégration du Front-end.",
     "link": "https://github.com/BonAppetit-Corentin-Baptiste/Projet-Michel-Bouillon",
-    "type": "dev"
+    "type": "dev",
+    "techBadges": "UX | UI | Figma | HTML | CSS | JavaScript"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "image": "./assets/img/campusFlow.png",
     "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",
     "link": "https://www.figma.com/design/UmipPWnlVkLIaXJvKkmIc2/Campus-Flow?node-id=0-1&t=BI7dCyRz8xEmm09U-1",
-    "type": "design"
+    "type": "design",
+    "techBadges": "UX | UI | Figma"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "image": "./assets/img/blogr.jpg",
     "description": "Reproduction d'une landing page complexe réalisée dans le cadre de mes études, sur mon temps libre. L'objectif était de valider mes compétences en intégration responsive et en manipulation du DOM.",
     "link": "https://github.com/MarchandBaptiste/blogr-landing-page-main",
-    "type": "dev"
+    "type": "dev",
+    "techBadges": "HTML | CSS | JavaScript"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "image": "./assets/img/sunnyside.jpg",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre. Ce challenge m'a permis de travailler spécifiquement sur la mise en page asymétrique et la gestion des grilles d'images responsives.",
     "link": "https://github.com/MarchandBaptiste/sunnyside-agency-landing-page",
-    "type": "dev"
+    "type": "dev",
+    "techBadges": "HTML | CSS | JavaScript"
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "image": "./assets/img/manage.jpg",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre.",
     "link": "https://github.com/MarchandBaptiste/manage-landing-page-master",
-    "type": "dev"
+    "type": "dev",
+    "techBadges": "HTML | CSS | JavaScript"
   }
 ]

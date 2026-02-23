@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.classList.add("project-card");
 
-      // Badges techno (champ "techs" optionnel dans le JSON)
       const techBadges = project.techs
         ? project.techs.map(t => `<span class="tech-badge">${t}</span>`).join("")
         : "";
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${project.image}" alt="${project.title}" loading="lazy">
         </div>
         <div class="project-description">
-          ${techBadges ? `<div class="project-techs">${techBadges}</div>` : ""}
+          ${project.techBadges ? `<div class="project-techs">${project.techBadges}</div>` : ""}
           <h3>${project.title}</h3>
           ${project.description ? `<p>${project.description.slice(0, 100)}${project.description.length > 100 ? "..." : ""}</p>` : ""}
           <span class="project-cta">Voir le projet →</span>
