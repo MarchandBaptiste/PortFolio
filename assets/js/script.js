@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("project-card");
 
       const techBadges = project.techs
-        ? project.techs.map(t => `<span class="tech-badge">${t}</span>`).join("")
+        ? project.techs
+            .map((t) => `<span class="tech-badge">${t}</span>`)
+            .join("")
         : "";
 
       card.innerHTML = `
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modal-title").textContent = project.title;
     document.getElementById("modal-img").src = project.image;
     document.getElementById("modal-img").alt = project.title;
-    document.getElementById("modal-desc").textContent = project.description || "";
+    document.getElementById("modal-desc").textContent =
+      project.description || "";
     document.getElementById("modal-link").href = project.link || "#";
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
@@ -72,7 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (modal) {
-    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
   }
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
@@ -80,17 +85,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Filtres
   function setActive(type) {
-    filterButtons.forEach(btn => {
+    filterButtons.forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.type === type);
     });
   }
 
   function applyFilter(type) {
-    const list = type === "all" ? projectsData : projectsData.filter(p => p.type === type);
+    const list =
+      type === "all"
+        ? projectsData
+        : projectsData.filter((p) => p.type === type);
     renderProjects(list);
   }
 
-  filterButtons.forEach(btn => {
+  filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       setActive(btn.dataset.type);
       applyFilter(btn.dataset.type);
@@ -99,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Chargement JSON
   fetch(projectsUrl)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       projectsData = data;
       renderProjects(projectsData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error("Erreur chargement projets:", err);
       container.innerHTML = `<p style="color:rgba(255,255,255,0.4);text-align:center;padding:40px 0;">Impossible de charger les projets.</p>`;
     });
