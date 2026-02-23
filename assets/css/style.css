@@ -115,7 +115,11 @@ header {
   right: -200px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(231, 121, 41, 0.05) 0%, transparent 65%);
+  background: radial-gradient(
+    circle,
+    rgba(231, 121, 41, 0.05) 0%,
+    transparent 65%
+  );
   pointer-events: none;
 }
 
@@ -166,8 +170,15 @@ header {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
 }
 
 /* Contenu hero */
@@ -221,7 +232,9 @@ header {
   letter-spacing: 0.08em;
   color: var(--muted);
   background: rgba(255, 255, 255, 0.02);
-  transition: border-color 0.3s, color 0.3s;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
 }
 
 .skill-chip:hover {
@@ -247,7 +260,8 @@ header {
   border: 2px solid transparent;
   background:
     linear-gradient(var(--bg), var(--bg)) padding-box,
-    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      border-box;
   color: white;
   white-space: nowrap;
   font-family: "Syne", sans-serif;
@@ -257,8 +271,10 @@ header {
 
 .btn-primary:hover {
   background:
-    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) padding-box,
-    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%) border-box;
+    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      padding-box,
+    linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%)
+      border-box;
   box-shadow: 0 0 16px rgba(231, 121, 41, 0.4);
 }
 
@@ -274,7 +290,11 @@ header {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(94deg, rgb(231, 121, 41) 0%, rgb(163, 43, 43) 100%);
+  background: linear-gradient(
+    94deg,
+    rgb(231, 121, 41) 0%,
+    rgb(163, 43, 43) 100%
+  );
   transition: all 0.3s ease;
 }
 
@@ -295,7 +315,9 @@ header {
   padding: 100px 6vw;
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .projects.visible {
@@ -372,13 +394,18 @@ header {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .project-card:hover {
   border-color: rgba(231, 121, 41, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(231, 121, 41, 0.1);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(231, 121, 41, 0.1);
 }
 
 .card-img-wrapper {
@@ -481,8 +508,14 @@ header {
 }
 
 @keyframes modalIn {
-  from { opacity: 0; transform: scale(0.95) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .modal-content h2 {
@@ -558,17 +591,29 @@ footer {
 
 /* ANIMATIONS */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  header { padding: 0 1.2rem; }
+  header {
+    padding: 0 1.2rem;
+  }
 
-  .nav-links { gap: 1.2rem; }
+  .nav-links {
+    gap: 1.2rem;
+  }
 
-  .hero { padding: 90px 5vw 60px; }
+  .hero {
+    padding: 90px 5vw 60px;
+  }
 
   .hero-inner {
     flex-direction: column;
@@ -583,16 +628,22 @@ footer {
     gap: 16px;
   }
 
-  .photo-wrapper { width: 140px; }
+  .photo-wrapper {
+    width: 140px;
+  }
 
-  .hero-name { font-size: 2.8rem; }
+  .hero-name {
+    font-size: 2.8rem;
+  }
 
   .hero-actions {
     gap: 14px;
     flex-direction: column-reverse;
   }
 
-  .project-grid { grid-template-columns: 1fr; }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 
   footer {
     flex-direction: column;
@@ -602,9 +653,13 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1100px) {
-  .project-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1100px) {
-  .project-grid { grid-template-columns: repeat(3, 1fr); }
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
