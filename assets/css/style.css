@@ -117,7 +117,7 @@ header {
   height: 700px;
   background: radial-gradient(
     circle,
-    rgba(231, 121, 41, 0.05) 0%,
+    rgba(231, 121, 41, 0.03) 0%,
     transparent 65%
   );
   pointer-events: none;
