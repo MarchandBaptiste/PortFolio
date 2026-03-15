@@ -70,5 +70,14 @@
     "link": "https://github.com/MarchandBaptiste/manage-landing-page-master",
     "type": "dev",
     "techBadges": "HTML | CSS | JavaScript"
+  },
+  {
+    "id": 9,
+    "title": "Sakila",
+    "image": "./assets/img/sakila.png",
+    "description": "Projet fullstack PHP connecté à la base Sakila : catalogue de films, acteurs, données financières et magasins, avec pagination, sessions et authentification.",
+    "link": "https://github.com/MarchandBaptiste/PDO",
+    "type": "dev",
+    "techBadges": "HTML | PHP | CSS | JavaScript"
   }
 ]

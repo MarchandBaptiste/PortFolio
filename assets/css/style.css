@@ -6,12 +6,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-::selection {
-  background-color: rgb(231, 121, 41);
-  color: white;
-}
-
 :root {
   --orange: rgb(231, 121, 41);
   --orange-dark: rgb(163, 43, 43);
@@ -22,6 +16,12 @@
   --muted: rgba(255, 255, 255, 0.45);
   --white: #f5f0ea;
 }
+
+::selection {
+  background-color: var(--orange);
+  color: white;
+}
+
 
 html {
   scroll-behavior: smooth;

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "HTML",
+    "image": "./assets/img/technos/HTML.png"
+  },
+  {
+    "id": 2,
+    "title": "CSS",
+    "image": "./assets/img/technos/CSS.png"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript",
+    "image": "./assets/img/technos/JS.png"
+  },
+  {
+    "id": 4,
+    "title": "Figma",
+    "image": "./assets/img/technos/Figma.webp"
+  },
+  {
+    "id": 5,
+    "title": "PHP",
+    "image": "./assets/img/technos/PHP.png"
+  },
+  {
+    "id": 6,
+    "title": "SQL",
+    "image": "./assets/img/technos/Sql.png"
+  },
+  {
+    "id": 7,
+    "title": "WordPress",
+    "image": "./assets/img/technos/WordPress.png"
+  },
+  {
+    "id": 8,
+    "title": "Python",
+    "image": "./assets/img/technos/Python.png"
+  },
+  {
+    "id": 9,
+    "title": "GitBash",
+    "image": "./assets/img/technos/GitBash.png"
+  },
+  {
+    "id": 10,
+    "title": "Adobe",
+    "image": "./assets/img/technos/Adobe.svg"
+  }
+]
