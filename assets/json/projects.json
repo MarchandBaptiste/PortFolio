@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Application en Python",
-    "image": "./assets/img/projetABR.png",
+    "image": "./assets/img/projetABR.webp",
     "description": "Application Python permettant de gérer un arbre binaire.",
     "link": "https://github.com/MarchandBaptiste/Projet-ABR",
     "type": "dev",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Logo du BDE",
-    "image": "./assets/img/logo-bde.png",
+    "image": "./assets/img/logo-bde.webp",
     "description": "Conception du logo du Bureau des Étudiants dans le cadre d'un concours de design. Projet lauréat ayant abouti à l'adoption et à l'utilisation officielle du logo par l'association.",
     "link": "https://www.figma.com/design/4i2pJPaOYDUdYdPOnx8QQM/Logo_BDE?node-id=0-1&t=w48cm1V8Qfmbj9xW-1",
     "type": "design",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "Instant Gaming",
-    "image": "./assets/img/instantgaming.png",
+    "image": "./assets/img/instantgaming.webp",
     "description": "Maquette UI/UX du site Instant Gaming réalisée sur Figma. Projet d'initiation à la conception d'interface.",
     "link": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1",
     "type": "design",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "title": "Campus Flow",
-    "image": "./assets/img/campusFlow.png",
+    "image": "./assets/img/campusFlow.webp",
     "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",
     "link": "https://www.figma.com/design/UmipPWnlVkLIaXJvKkmIc2/Campus-Flow?node-id=0-1&t=BI7dCyRz8xEmm09U-1",
     "type": "design",
