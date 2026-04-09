@@ -80,4 +80,14 @@
     "type": "dev",
     "techBadges": "HTML | PHP | CSS | JavaScript"
   }
+  ,
+  {
+    "id": 10,
+    "title": "Trombinoscope",
+    "image": "./assets/img/Trombinoscope.webp",
+    "description": "Une application web de trombinoscope inspirée des Yearbooks américains. Chaque élève dispose d'une fiche avec sa photo, son nom, sa classe et sa citation personnelle. Les administrateurs peuvent gérer l'annuaire de manière entièrement dynamique.",
+    "link": "https://github.com/MarchandBaptiste/Trombinoscope",
+    "type": "dev",
+    "techBadges": "HTML | PHP | CSS | JavaScript | SQL"
+  }
 ]
