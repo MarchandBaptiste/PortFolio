@@ -120,14 +120,24 @@
 
       <div id="project-modal" class="modal" style="display: none">
         <div class="modal-content">
+          <div class="sheet-handle" aria-hidden="true"></div>
           <span id="close-modal">✖</span>
-          <h2 id="modal-title"></h2>
-          <img id="modal-img" alt="" />
-          <p id="modal-desc"></p>
-          <div>
-            <a id="modal-link" class="btn-primary" target="_blank"
-              >Voir le projet</a
-            >
+          <div class="modal-media">
+            <img id="modal-img" alt="" />
+          </div>
+          <div class="modal-body">
+            <p id="modal-tag" class="modal-tag"></p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <div class="modal-techs" id="modal-techs"></div>
+            <div class="modal-links">
+              <a id="modal-code" class="btn-secondary" target="_blank"
+                >Code source</a
+              >
+              <a id="modal-demo" class="btn-primary" target="_blank"
+                >Voir en ligne</a
+              >
+            </div>
           </div>
         </div>
       </div>
