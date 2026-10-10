@@ -2,10 +2,19 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio de Baptiste Marchand, développeur : projets web et design."
+    />
     <title>Portfolio - Marchand Baptiste</title>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="icon" type="image/jpg" href="./assets/logo/logo.png" />
+    <link rel="icon" type="image/png" href="./assets/logo/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -18,7 +27,7 @@
       <div class="logo">
         <img src="./assets/logo/logo.png" alt="Logo" />
       </div>
-      <nav>
+      <nav aria-label="Navigation principale">
         <ul class="nav-links">
           <li><a href="#about">À propos</a></li>
           <li><a href="#projects">Projets</a></li>
@@ -29,15 +38,12 @@
     <main>
       <section class="hero" id="about">
         <div class="hero-inner">
-          <div class="hero-photo">
-            <div class="photo-wrapper">
-              <img
-                src="./assets/img/PP.png"
-                class="img-pp"
-                alt="Baptiste Marchand"
-              />
-              <div class="photo-border"></div>
-            </div>
+          <div class="photo-wrapper">
+            <img
+              src="./assets/img/PP.webp"
+              class="img-pp"
+              alt="Baptiste Marchand"
+            />
           </div>
 
           <div class="hero-content">
@@ -69,24 +75,26 @@
                   href="https://github.com/MarchandBaptiste"
                   class="icon-btn"
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
                   <img
-                    src="./assets/logo/github-logo.png"
+                    src="./assets/logo/github-logo.svg"
                     class="logo-link"
-                    alt="GitHub"
+                    alt=""
                   />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/baptiste-marchand-35b027397/"
                   class="icon-btn"
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
                   <img
-                    src="./assets/logo/linkedin-logo.png"
+                    src="./assets/logo/linkedin-logo.svg"
                     class="logo-link"
-                    alt="LinkedIn"
+                    alt=""
                   />
                 </a>
                 <a
@@ -94,17 +102,14 @@
                   class="icon-btn"
                   aria-label="Email"
                 >
-                  <img
-                    src="./assets/logo/email.png"
-                    class="logo-link"
-                    alt="Email"
-                  />
+                  <img src="./assets/logo/email.svg" class="logo-link" alt="" />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section id="projects" class="projects">
         <div class="section-header">
           <span class="section-tag">— Mes réalisations</span>
@@ -117,24 +122,45 @@
         </div>
         <div id="projects-container" class="project-grid"></div>
       </section>
-
-      <div id="project-modal" class="modal" style="display: none">
+      <div
+        id="project-modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        style="display: none"
+      >
         <div class="modal-content">
           <div class="sheet-handle" aria-hidden="true"></div>
-          <span id="close-modal">✖</span>
+          <button
+            id="close-modal"
+            class="close-modal"
+            type="button"
+            aria-label="Fermer"
+          >
+            ✖
+          </button>
           <div class="modal-media">
             <img id="modal-img" alt="" />
           </div>
           <div class="modal-body">
             <p id="modal-tag" class="modal-tag"></p>
             <h2 id="modal-title"></h2>
-            <p id="modal-desc"></p>
+            <p id="modal-desc" class="modal-desc"></p>
             <div class="modal-techs" id="modal-techs"></div>
             <div class="modal-links">
-              <a id="modal-code" class="btn-secondary" target="_blank"
+              <a
+                id="modal-code"
+                class="btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Code source</a
               >
-              <a id="modal-demo" class="btn-primary" target="_blank"
+              <a
+                id="modal-demo"
+                class="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Voir en ligne</a
               >
             </div>
@@ -142,13 +168,20 @@
         </div>
       </div>
     </main>
+
     <footer>
-      <span class="footer">© 2026 Marchand Baptiste</span>
+      <span>© 2026 Marchand Baptiste</span>
       <div class="footer-links">
-        <a href="https://github.com/MarchandBaptiste" target="_blank">GitHub</a>
+        <a
+          href="https://github.com/MarchandBaptiste"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
         <a
           href="https://www.linkedin.com/in/baptiste-marchand-35b027397/"
           target="_blank"
+          rel="noopener noreferrer"
           >LinkedIn</a
         >
         <a href="mailto:baptistemarchand2007@gmail.com">Email</a>

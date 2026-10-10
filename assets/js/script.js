@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const modal = document.getElementById("project-modal");
   const closeBtn = document.getElementById("close-modal");
+  const desktopQuery = window.matchMedia("(min-width: 768px)");
   let projectsData = [];
-  initSheetDrag();
+  let lastFocused = null;
 
   // Scroll reveal
   function checkVisibility() {
@@ -16,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("scroll", checkVisibility, { passive: true });
   window.addEventListener("load", checkVisibility);
+  checkVisibility();
 
   // Rendu des tags de technos (cartes et modal)
   function renderTechBadges(techBadges) {
@@ -31,13 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = "";
 
     if (!list || list.length === 0) {
-      container.innerHTML = `<p style="color:rgba(255,255,255,0.4);text-align:center;padding:40px 0;">Aucun projet à afficher.</p>`;
+      container.innerHTML = `<p class="empty-message">Aucun projet à afficher.</p>`;
       return;
     }
 
     list.forEach((project) => {
       const card = document.createElement("div");
       card.classList.add("project-card");
+      card.setAttribute("role", "button");
+      card.tabIndex = 0;
 
       const techBadgesHTML = renderTechBadges(project.techBadges);
 
@@ -54,6 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
       card.addEventListener("click", () => openModal(project));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal(project);
+        }
+      });
       container.appendChild(card);
     });
   }
@@ -68,8 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modal-title").textContent = project.title;
     document.getElementById("modal-img").src = project.image;
     document.getElementById("modal-img").alt = project.title;
-    document.getElementById("modal-desc").textContent = project.description || "";
-    document.getElementById("modal-techs").innerHTML = renderTechBadges(project.techBadges);
+    document.getElementById("modal-desc").textContent =
+      project.description || "";
+    document.getElementById("modal-techs").innerHTML = renderTechBadges(
+      project.techBadges,
+    );
 
     const codeBtn = document.getElementById("modal-code");
     const demoBtn = document.getElementById("modal-demo");
@@ -83,19 +96,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (project.demoLink) {
       demoBtn.href = project.demoLink;
-      demoBtn.textContent = project.type === "design" ? "Voir sur Figma" : "Voir en ligne";
+      demoBtn.textContent =
+        project.type === "design" ? "Voir sur Figma" : "Voir en ligne";
       demoBtn.style.display = "inline-flex";
     } else {
       demoBtn.style.display = "none";
     }
 
+    lastFocused = document.activeElement;
     modal.style.display = "flex";
     document.body.style.overflow = "hidden";
+    if (closeBtn) closeBtn.focus();
   }
 
   function closeModal() {
+    if (modal.style.display === "none") return;
     modal.style.display = "none";
     document.body.style.overflow = "";
+    if (lastFocused) {
+      lastFocused.focus();
+      lastFocused = null;
+    }
   }
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
@@ -139,8 +160,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let dragging = false;
 
     sheet.addEventListener("touchstart", (e) => {
-      if (window.innerWidth >= 700 || sheet.scrollTop > 0) return;
+      if (desktopQuery.matches || sheet.scrollTop > 0) return;
       startY = e.touches[0].clientY;
+      currentY = startY;
       dragging = true;
     });
 
@@ -174,15 +196,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  initSheetDrag();
+
   // Chargement JSON
   fetch(projectsUrl)
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
     .then((data) => {
       projectsData = data;
       renderProjects(projectsData);
     })
     .catch((err) => {
       console.error("Erreur chargement projets:", err);
-      container.innerHTML = `<p style="color:rgba(255,255,255,0.4);text-align:center;padding:40px 0;">Impossible de charger les projets.</p>`;
+      container.innerHTML = `<p class="empty-message">Impossible de charger les projets.</p>`;
     });
 });
