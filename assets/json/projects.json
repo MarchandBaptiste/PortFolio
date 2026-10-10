@@ -44,7 +44,7 @@
   {
     "id": 4,
     "title": "Bon Appétit",
-    "image": "./assets/img/chef_dark.jpg",
+    "image": "./assets/img/chef_dark.webp",
     "description": "Développement Front-end (HTML/CSS) d'un site vitrine pour restaurant. Le projet de groupe incluait la création complète de la charte graphique, du design UI/UX sur Figma et l'intégration du Front-end.",
     "type": "dev",
     "techBadges": ["UX", "UI", "Figma", "HTML", "CSS", "JavaScript"],
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "title": "Blogr",
-    "image": "./assets/img/blogr.jpg",
+    "image": "./assets/img/blogr.webp",
     "description": "Reproduction d'une landing page complexe réalisée dans le cadre de mes études, sur mon temps libre. L'objectif était de valider mes compétences en intégration responsive et en manipulation du DOM.",
     "type": "dev",
     "techBadges": ["HTML", "CSS", "JavaScript"],
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "title": "Sunnyside",
-    "image": "./assets/img/sunnyside.jpg",
+    "image": "./assets/img/sunnyside.webp",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre. Ce challenge m'a permis de travailler spécifiquement sur la mise en page asymétrique et la gestion des grilles d'images responsives.",
     "type": "dev",
     "techBadges": ["HTML", "CSS", "JavaScript"],
@@ -100,7 +100,7 @@
   {
     "id": 8,
     "title": "Manage",
-    "image": "./assets/img/manage.jpg",
+    "image": "./assets/img/manage.webp",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre.",
     "type": "dev",
     "techBadges": ["HTML", "CSS", "JavaScript"],
@@ -114,7 +114,7 @@
   {
     "id": 9,
     "title": "Sakila",
-    "image": "./assets/img/sakila.png",
+    "image": "./assets/img/sakila.webp",
     "description": "Projet fullstack PHP connecté à la base Sakila : catalogue de films, acteurs, données financières et magasins, avec pagination, sessions et authentification.",
     "type": "dev",
     "techBadges": ["HTML", "PHP", "CSS", "JavaScript"],
