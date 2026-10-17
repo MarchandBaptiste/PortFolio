@@ -29,20 +29,6 @@
   },
   {
     "id": 3,
-    "title": "Instant Gaming",
-    "image": "./assets/img/instantgaming.webp",
-    "description": "Maquette UI/UX du site Instant Gaming réalisée sur Figma. Projet d'initiation à la conception d'interface.",
-    "type": "design",
-    "techBadges": ["UX", "UI", "Figma"],
-    "role": "solo",
-    "teamSize": 1,
-    "duration": "1 journée",
-    "date": "",
-    "codeLink": "",
-    "demoLink": "https://www.figma.com/design/ZgsC9sNBBLZzzibTGGjl8P/instantGaming_Marchand_Baptiste?node-id=0-1&t=RdSPyzSiD969uRJT-1"
-  },
-  {
-    "id": 4,
     "title": "Bon Appétit",
     "image": "./assets/img/chef_dark.webp",
     "description": "Développement Front-end (HTML/CSS) d'un site vitrine pour restaurant. Le projet de groupe incluait la création complète de la charte graphique, du design UI/UX sur Figma et l'intégration du Front-end.",
@@ -56,7 +42,7 @@
     "demoLink": "https://bonappetit-corentin-baptiste.github.io/Projet-Michel-Bouillon/"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Campus Flow",
     "image": "./assets/img/campusFlow.webp",
     "description": "Conception UX/UI complète (Figma) d'une application destinée aux étudiants. Le projet s'est concentré sur l'accessibilité et la création d'une interface utilisateur intuitive répondant aux problématiques d'un campus.",
@@ -70,7 +56,7 @@
     "demoLink": "https://www.figma.com/design/UmipPWnlVkLIaXJvKkmIc2/Campus-Flow?node-id=0-1&t=BI7dCyRz8xEmm09U-1"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Blogr",
     "image": "./assets/img/blogr.webp",
     "description": "Reproduction d'une landing page complexe réalisée dans le cadre de mes études, sur mon temps libre. L'objectif était de valider mes compétences en intégration responsive et en manipulation du DOM.",
@@ -84,7 +70,7 @@
     "demoLink": "https://marchandbaptiste.github.io/blogr-landing-page-main/"
   },
   {
-    "id": 7,
+    "id": 6,
     "title": "Sunnyside",
     "image": "./assets/img/sunnyside.webp",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre. Ce challenge m'a permis de travailler spécifiquement sur la mise en page asymétrique et la gestion des grilles d'images responsives.",
@@ -98,7 +84,7 @@
     "demoLink": "https://marchandbaptiste.github.io/sunnyside-agency-landing-page/"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Manage",
     "image": "./assets/img/manage.webp",
     "description": "Ce projet est une intégration de landing page réalisée sur mon temps libre.",
@@ -112,7 +98,7 @@
     "demoLink": "https://marchandbaptiste.github.io/manage-landing-page-master/"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Sakila",
     "image": "./assets/img/sakila.webp",
     "description": "Projet fullstack PHP connecté à la base Sakila : catalogue de films, acteurs, données financières et magasins, avec pagination, sessions et authentification.",
@@ -126,11 +112,10 @@
     "demoLink": ""
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Trombinoscope",
     "image": "./assets/img/Trombinoscope.webp",
     "description": "Une application web de trombinoscope inspirée des Yearbooks américains. Chaque élève dispose d'une fiche avec sa photo, son nom, sa classe et sa citation personnelle. Les administrateurs peuvent gérer l'annuaire de manière entièrement dynamique.",
-    "link": "https://github.com/MarchandBaptiste/Trombinoscope",
     "type": "dev",
     "techBadges": ["HTML", "PHP", "CSS", "JavaScript", "SQL"],
     "role": "equipe",
@@ -139,5 +124,19 @@
     "date": "",
     "codeLink": "https://github.com/MarchandBaptiste/Trombinoscope",
     "demoLink": ""
+  },
+  {
+    "id": 10,
+    "title": "Logitech G - LIGHTSYNC",
+    "image": "./assets/img/logitech.webp",
+    "description": "Intégration d’une page produit Logitech G, de la maquette Figma au code. Variables reprises en custom properties, SCSS structuré en SMACSS/BEM, pastilles de couleur générées depuis une map.",
+    "type": "design",
+    "techBadges": ["HTML", "CSS", "BEM", "SMACSS", "Figma"],
+    "role": "solo",
+    "teamSize": 2,
+    "duration": "2 semaines",
+    "date": "",
+    "codeLink": "https://github.com/MarchandBaptiste/TD_Logitech",
+    "demoLink": "https://www.figma.com/design/TkcgPfkjX8HERof0UQisf7/Logitech?node-id=0-1&t=kCXl88kt18KNOe4v-1"
   }
 ]
