@@ -130,13 +130,13 @@
     "title": "Logitech G - LIGHTSYNC",
     "image": "./assets/img/logitech.webp",
     "description": "Intégration d’une page produit Logitech G, de la maquette Figma au code. Variables reprises en custom properties, SCSS structuré en SMACSS/BEM, pastilles de couleur générées depuis une map.",
-    "type": "design",
+    "type": "dev",
     "techBadges": ["HTML", "CSS", "BEM", "SMACSS", "Figma"],
     "role": "solo",
     "teamSize": 2,
     "duration": "2 semaines",
     "date": "",
     "codeLink": "https://github.com/MarchandBaptiste/TD_Logitech",
-    "demoLink": "https://www.figma.com/design/TkcgPfkjX8HERof0UQisf7/Logitech?node-id=0-1&t=kCXl88kt18KNOe4v-1"
+    "demoLink": "https://marchandbaptiste.github.io/TD_Logitech/"
   }
 ]
