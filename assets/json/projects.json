@@ -1,19 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Application en Python",
-    "image": "./assets/img/projetABR.webp",
-    "description": "Application Python permettant de visualiser un arbre binaire.",
-    "type": "dev",
-    "techBadges": ["Python", "Tkinter"],
-    "role": "equipe",
-    "teamSize": 2,
-    "duration": "2 semaines",
-    "date": "",
-    "codeLink": "https://github.com/MarchandBaptiste/Projet-ABR",
-    "demoLink": ""
-  },
-  {
     "id": 2,
     "title": "Logo du BDE",
     "image": "./assets/img/logo-bde.webp",
@@ -133,10 +119,24 @@
     "type": "dev",
     "techBadges": ["HTML", "CSS", "BEM", "SMACSS", "Figma"],
     "role": "solo",
-    "teamSize": 2,
+    "teamSize": 1,
     "duration": "2 semaines",
     "date": "",
     "codeLink": "https://github.com/MarchandBaptiste/TD_Logitech",
     "demoLink": "https://marchandbaptiste.github.io/TD_Logitech/"
+  },
+  {
+    "id": 11,
+    "title": "PiggyBank",
+    "image": "./assets/img/PiggyBank.webp",
+    "description": "PiggyBank, une application mobile dédiée à la gestion du budget familial. Réalisation nécessitant l'application de compétences UX/UI et l'utilisation de custom personnalisées.",
+    "type": "design",
+    "techBadges": ["UX", "UI", "Figma"],
+    "role": "solo",
+    "teamSize": 1,
+    "duration": "2 semaines",
+    "date": "",
+    "codeLink": "",
+    "demoLink": "https://www.figma.com/design/lUQGY5aPRqoAkL7qUvfhze/PiggyBank?node-id=0-1&t=igehOIfrfaKQtUSx-1"
   }
 ]
