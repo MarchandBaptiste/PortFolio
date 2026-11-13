@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const projectsUrl = "./assets/json/projects.json";
@@ -8,13 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("project-modal");
   const closeBtn = document.getElementById("close-modal");
   const desktopQuery = window.matchMedia("(min-width: 768px)");
-  const container3D = document.getElementById('logo-3d');
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(container.clientWidth, container.clientHeight); // adapte la taille à la div
-  container.appendChild(renderer.domElement);
+  const container3D = document.getElementById("logo-3d");
+  const width = container3D.clientWidth;
+  const height = container3D.clientHeight;
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(width, height);
+  container3D.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  scene.add(ambientLight);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+  directionalLight.position.set(5, 10, 7.5);
+  scene.add(directionalLight);
   let projectsData = [];
   let lastFocused = null;
-
+  console.log(width, height);
   // Scroll reveal
   function checkVisibility() {
     document.querySelectorAll(".projects").forEach((el) => {
