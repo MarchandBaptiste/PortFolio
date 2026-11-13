@@ -1,3 +1,6 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const projectsUrl = "./assets/json/projects.json";
   const container = document.getElementById("projects-container");
@@ -5,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("project-modal");
   const closeBtn = document.getElementById("close-modal");
   const desktopQuery = window.matchMedia("(min-width: 768px)");
+  const container3D = document.getElementById('logo-3d');
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(container.clientWidth, container.clientHeight); // adapte la taille à la div
+  container.appendChild(renderer.domElement);
   let projectsData = [];
   let lastFocused = null;
 
