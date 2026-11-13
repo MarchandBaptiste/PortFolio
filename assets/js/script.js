@@ -11,19 +11,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const container3D = document.getElementById("logo-3d");
   const width = container3D.clientWidth;
   const height = container3D.clientHeight;
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(width, height);
   container3D.appendChild(renderer.domElement);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  camera.position.z = 3;
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0,8);
   scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 15);
   directionalLight.position.set(5, 10, 7.5);
   scene.add(directionalLight);
   let projectsData = [];
   let lastFocused = null;
-  console.log(width, height);
+
+  // Chargement du modèle GLB
+  const loader = new GLTFLoader();
+
+  loader.load(
+    "./assets/logo/Logo.glb",
+    (gltf) => {
+      // ajout du modèle à la scène
+      const model = gltf.scene;
+      scene.add(model);
+    },
+    (xhr) => {
+      console.log("chargé");
+    },
+    (error) => {
+      console.error("Erreur lors du chargement du GLB :", error);
+    },
+  );
+
+  // boucle d'animation
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
   // Scroll reveal
   function checkVisibility() {
     document.querySelectorAll(".projects").forEach((el) => {
