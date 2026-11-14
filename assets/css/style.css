@@ -132,9 +132,10 @@ header {
   z-index: 100;
 }
 
-.logo img {
-  width: 52px;
-  height: auto;
+#logo-3d {
+  display: block;
+  width: 65px;
+  height: 65px;
 }
 
 .nav-links {

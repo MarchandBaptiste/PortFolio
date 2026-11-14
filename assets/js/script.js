@@ -1,3 +1,6 @@
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const projectsUrl = "./assets/json/projects.json";
   const container = document.getElementById("projects-container");
@@ -5,8 +8,72 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("project-modal");
   const closeBtn = document.getElementById("close-modal");
   const desktopQuery = window.matchMedia("(min-width: 768px)");
+  const container3D = document.getElementById("logo-3d");
+  const width = container3D.clientWidth;
+  const height = container3D.clientHeight;
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.max(window.devicePixelRatio, 2));
+  renderer.setSize(width, height);
+  container3D.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+  camera.position.z = 3;
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0, 8);
+  scene.add(ambientLight);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 15);
+  directionalLight.position.set(5, 10, 7.5);
+  scene.add(directionalLight);
   let projectsData = [];
   let lastFocused = null;
+
+  container3D.addEventListener("pointerenter", (event) => {
+    if (event.pointerType === "mouse") {
+      isSpinning = true;
+    }
+  });
+  container3D.addEventListener("pointerleave", (event) => {
+    if (event.pointerType === "mouse") {
+      isSpinning = false;
+    }
+  });
+  container3D.addEventListener("click", () => {
+    targetRotation += 2 * Math.PI;
+  });
+
+  // Chargement du modèle GLB
+  let model = null;
+  let isSpinning = false;
+  let targetRotation = 0;
+  const loader = new GLTFLoader();
+
+  loader.load(
+    "./assets/logo/Logo.glb",
+    (gltf) => {
+      // ajout du modèle à la scène
+      model = gltf.scene;
+      scene.add(model);
+    },
+    (xhr) => {
+      console.log("chargé");
+    },
+    (error) => {
+      console.error("Erreur lors du chargement du GLB :", error);
+    },
+  );
+
+  // boucle d'animation
+  function animate() {
+    requestAnimationFrame(animate);
+    if (model && isSpinning) {
+      model.rotation.y += 0.07;
+    }
+    // mobil
+    if (model && model.rotation.y < targetRotation) {
+      model.rotation.y = Math.min(model.rotation.y + 0.1, targetRotation);
+    }
+    renderer.render(scene, camera);
+  }
+  animate();
 
   // Scroll reveal
   function checkVisibility() {
