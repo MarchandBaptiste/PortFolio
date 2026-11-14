@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   camera.position.z = 3;
   const ambientLight = new THREE.AmbientLight(0xffffff, 0, 8);
   scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 15);
-  directionalLight.position.set(5, 10, 7.5);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 20);
+  directionalLight.position.set(10, 10, 20);
   scene.add(directionalLight);
   let projectsData = [];
   let lastFocused = null;
