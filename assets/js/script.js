@@ -25,19 +25,28 @@ document.addEventListener("DOMContentLoaded", () => {
   scene.add(directionalLight);
   let projectsData = [];
   let lastFocused = null;
+  const TWO_PI = 2 * Math.PI;
 
   container3D.addEventListener("pointerenter", (event) => {
     if (event.pointerType === "mouse") {
       isSpinning = true;
     }
   });
+
   container3D.addEventListener("pointerleave", (event) => {
     if (event.pointerType === "mouse") {
       isSpinning = false;
+      if (model) {
+        targetRotation = Math.ceil(model.rotation.y / TWO_PI) * TWO_PI;
+      }
     }
   });
+
   container3D.addEventListener("click", () => {
-    targetRotation += 2 * Math.PI;
+    if (model) {
+      const base = Math.max(model.rotation.y, targetRotation);
+      targetRotation = Math.ceil(base / TWO_PI) * TWO_PI + TWO_PI;
+    }
   });
 
   // Chargement du modèle GLB
@@ -64,13 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // boucle d'animation
   function animate() {
     requestAnimationFrame(animate);
-    if (model && isSpinning) {
-      model.rotation.y += 0.07;
+    if (model) {
+      if (isSpinning) {
+        model.rotation.y += 0.07;
+        targetRotation = model.rotation.y;
+      } else if (model.rotation.y < targetRotation) {
+        model.rotation.y = Math.min(model.rotation.y + 0.1, targetRotation);
+        if (model.rotation.y === targetRotation) {
+          model.rotation.y = 0;
+          targetRotation = 0;
+        }
+      }
     }
-    // mobil
-    if (model && model.rotation.y < targetRotation) {
-      model.rotation.y = Math.min(model.rotation.y + 0.1, targetRotation);
-    }
+
     renderer.render(scene, camera);
   }
   animate();
