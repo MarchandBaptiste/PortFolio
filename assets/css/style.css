@@ -251,7 +251,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 5px;
   margin-bottom: 36px;
   opacity: 0;
   animation: fadeUp 0.7s 0.65s forwards;
